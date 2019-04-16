@@ -1,0 +1,492 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <LastUsedBuildConfiguration>Release</LastUsedBuildConfiguration>
+    <LastUsedPlatform>Any CPU</LastUsedPlatform>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>E:\proapps</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="AutoComplete/jquery-ui.css">
+      <publishTime>02/19/2019 12:53:53</publishTime>
+    </File>
+    <File Include="AutoComplete/jquery-ui.js">
+      <publishTime>02/19/2019 12:54:10</publishTime>
+    </File>
+    <File Include="AutoComplete/jquery-ui.min.css">
+      <publishTime>02/19/2019 12:53:53</publishTime>
+    </File>
+    <File Include="AutoComplete/jquery-ui.min.js">
+      <publishTime>02/19/2019 12:54:10</publishTime>
+    </File>
+    <File Include="AutoComplete/jquery-ui.structure.css">
+      <publishTime>02/19/2019 12:53:53</publishTime>
+    </File>
+    <File Include="AutoComplete/jquery-ui.structure.min.css">
+      <publishTime>02/19/2019 12:53:53</publishTime>
+    </File>
+    <File Include="AutoComplete/jquery-ui.theme.css">
+      <publishTime>02/19/2019 12:53:53</publishTime>
+    </File>
+    <File Include="AutoComplete/jquery-ui.theme.min.css">
+      <publishTime>02/19/2019 12:53:53</publishTime>
+    </File>
+    <File Include="AutoComplete/jquery/jquery.js">
+      <publishTime>02/19/2019 13:05:04</publishTime>
+    </File>
+    <File Include="bin/AjaxControlToolkit.dll">
+      <publishTime>03/21/2013 17:10:22</publishTime>
+    </File>
+    <File Include="bin/Site.Master">
+      <publishTime>03/25/2019 15:19:57</publishTime>
+    </File>
+    <File Include="bin/Site.Master.designer.vb">
+      <publishTime>03/21/2019 15:04:45</publishTime>
+    </File>
+    <File Include="bin/Site.Master.vb">
+      <publishTime>02/20/2019 15:54:22</publishTime>
+    </File>
+    <File Include="bin/SPGeneral.dll">
+      <publishTime>10/04/2010 15:53:14</publishTime>
+    </File>
+    <File Include="bin/WebIsomedik.dll">
+      <publishTime>03/28/2019 13:32:39</publishTime>
+    </File>
+    <File Include="bin/WebIsomedik.xml">
+      <publishTime>03/28/2019 13:32:39</publishTime>
+    </File>
+    <File Include="bin/WebService.dll">
+      <publishTime>03/28/2019 13:32:38</publishTime>
+    </File>
+    <File Include="BioData.aspx">
+      <publishTime>12/28/2018 16:24:18</publishTime>
+    </File>
+    <File Include="bootstraps/bootstrap-datetimepicker.4.7.14.min.css">
+      <publishTime>12/20/2018 16:31:56</publishTime>
+    </File>
+    <File Include="bootstraps/bootstrap-responsive.css">
+      <publishTime>12/17/2018 14:31:02</publishTime>
+    </File>
+    <File Include="bootstraps/bootstrap.css">
+      <publishTime>12/18/2018 16:40:32</publishTime>
+    </File>
+    <File Include="bootstraps/bootstrap.js">
+      <publishTime>12/17/2018 14:31:02</publishTime>
+    </File>
+    <File Include="bootstraps/bootstrap.min.css">
+      <publishTime>02/26/2019 09:39:08</publishTime>
+    </File>
+    <File Include="bootstraps/bootstrap.min.js">
+      <publishTime>03/17/2015 08:36:50</publishTime>
+    </File>
+    <File Include="bootstraps/colorpicker.css">
+      <publishTime>12/19/2018 16:00:42</publishTime>
+    </File>
+    <File Include="bootstraps/datepicker.css">
+      <publishTime>12/19/2018 16:00:42</publishTime>
+    </File>
+    <File Include="bootstraps/excanvas.js">
+      <publishTime>12/17/2018 14:31:02</publishTime>
+    </File>
+    <File Include="bootstraps/fonts/adminpro-icon.svg">
+      <publishTime>10/15/2018 06:09:28</publishTime>
+    </File>
+    <File Include="bootstraps/fonts/adminpro-icon.ttf">
+      <publishTime>10/15/2018 06:09:28</publishTime>
+    </File>
+    <File Include="bootstraps/fonts/adminpro-icon.woff">
+      <publishTime>10/15/2018 06:09:28</publishTime>
+    </File>
+    <File Include="bootstraps/fonts/font-awesome.css">
+      <publishTime>04/16/2015 09:32:12</publishTime>
+    </File>
+    <File Include="bootstraps/fonts/font-awesome.min.css">
+      <publishTime>05/16/2015 17:53:24</publishTime>
+    </File>
+    <File Include="bootstraps/fonts/fontawesome-webfont.eot">
+      <publishTime>04/16/2015 09:32:12</publishTime>
+    </File>
+    <File Include="bootstraps/fonts/fontawesome-webfont.svg">
+      <publishTime>07/19/2015 20:40:22</publishTime>
+    </File>
+    <File Include="bootstraps/fonts/fontawesome-webfont.ttf">
+      <publishTime>04/16/2015 09:32:12</publishTime>
+    </File>
+    <File Include="bootstraps/fonts/fontawesome-webfont.woff">
+      <publishTime>04/16/2015 09:32:12</publishTime>
+    </File>
+    <File Include="bootstraps/fonts/fontawesome-webfont.woff2">
+      <publishTime>10/15/2018 06:09:28</publishTime>
+    </File>
+    <File Include="bootstraps/fonts/FontAwesome.otf">
+      <publishTime>04/16/2015 09:32:12</publishTime>
+    </File>
+    <File Include="bootstraps/fonts/glyphicons-halflings-regular.eot">
+      <publishTime>03/17/2015 08:36:50</publishTime>
+    </File>
+    <File Include="bootstraps/fonts/glyphicons-halflings-regular.svg">
+      <publishTime>07/19/2015 20:40:22</publishTime>
+    </File>
+    <File Include="bootstraps/fonts/glyphicons-halflings-regular.ttf">
+      <publishTime>03/17/2015 08:36:50</publishTime>
+    </File>
+    <File Include="bootstraps/fonts/glyphicons-halflings-regular.woff">
+      <publishTime>03/17/2015 08:36:50</publishTime>
+    </File>
+    <File Include="bootstraps/fonts/glyphicons-halflings-regular.woff2">
+      <publishTime>03/17/2015 08:36:50</publishTime>
+    </File>
+    <File Include="bootstraps/fonts/ionicons.eot">
+      <publishTime>01/03/2015 12:02:30</publishTime>
+    </File>
+    <File Include="bootstraps/fonts/ionicons.svg">
+      <publishTime>07/19/2015 20:40:22</publishTime>
+    </File>
+    <File Include="bootstraps/fonts/ionicons.ttf">
+      <publishTime>01/03/2015 12:02:30</publishTime>
+    </File>
+    <File Include="bootstraps/fonts/ionicons.woff">
+      <publishTime>01/03/2015 12:02:30</publishTime>
+    </File>
+    <File Include="bootstraps/fonts/ionicons.woff.dap">
+      <publishTime>05/16/2015 23:59:28</publishTime>
+    </File>
+    <File Include="bootstraps/fonts/summernote.eot">
+      <publishTime>10/15/2018 06:09:28</publishTime>
+    </File>
+    <File Include="bootstraps/fonts/summernote.ttf">
+      <publishTime>10/15/2018 06:09:28</publishTime>
+    </File>
+    <File Include="bootstraps/fonts/summernote.woff">
+      <publishTime>10/15/2018 06:09:28</publishTime>
+    </File>
+    <File Include="bootstraps/fullcalendar.css">
+      <publishTime>12/17/2018 14:31:02</publishTime>
+    </File>
+    <File Include="bootstraps/fullcalendar.js">
+      <publishTime>12/17/2018 14:31:02</publishTime>
+    </File>
+    <File Include="bootstraps/img/logoname.png">
+      <publishTime>12/17/2018 11:25:28</publishTime>
+    </File>
+    <File Include="bootstraps/jQuery.0.6.0.js">
+      <publishTime>12/17/2018 14:31:02</publishTime>
+    </File>
+    <File Include="bootstraps/jQuery.0.7.js">
+      <publishTime>12/17/2018 14:31:02</publishTime>
+    </File>
+    <File Include="bootstraps/jquery.1.12.4.min.js">
+      <publishTime>12/20/2018 16:28:02</publishTime>
+    </File>
+    <File Include="bootstraps/jQuery.1.7.2.js">
+      <publishTime>12/17/2018 14:31:02</publishTime>
+    </File>
+    <File Include="bootstraps/jQuery.UI.1.8.21.js">
+      <publishTime>12/17/2018 14:31:02</publishTime>
+    </File>
+    <File Include="bootstraps/jquery_005.js">
+      <publishTime>12/17/2018 14:31:02</publishTime>
+    </File>
+    <File Include="bootstraps/Login.js">
+      <publishTime>12/18/2018 09:12:24</publishTime>
+    </File>
+    <File Include="bootstraps/maruti-login.css">
+      <publishTime>01/23/2019 10:30:46</publishTime>
+    </File>
+    <File Include="bootstraps/maruti-media.css">
+      <publishTime>12/19/2018 10:18:08</publishTime>
+    </File>
+    <File Include="bootstraps/maruti-style.css">
+      <publishTime>03/06/2019 14:22:34</publishTime>
+    </File>
+    <File Include="bootstraps/maruti.js">
+      <publishTime>12/17/2018 14:31:02</publishTime>
+    </File>
+    <File Include="bootstraps/maruti_002.js">
+      <publishTime>12/17/2018 14:31:02</publishTime>
+    </File>
+    <File Include="bootstraps/maruti_003.js">
+      <publishTime>12/17/2018 14:31:02</publishTime>
+    </File>
+    <File Include="bootstraps/moment.2.15.1.min.js">
+      <publishTime>12/20/2018 16:29:30</publishTime>
+    </File>
+    <File Include="bootstraps/select2.css">
+      <publishTime>12/19/2018 16:00:42</publishTime>
+    </File>
+    <File Include="bootstraps/select2.js">
+      <publishTime>12/19/2018 16:00:42</publishTime>
+    </File>
+    <File Include="bootstraps/uniform.css">
+      <publishTime>12/19/2018 16:00:42</publishTime>
+    </File>
+    <File Include="Branch.aspx">
+      <publishTime>12/19/2018 15:21:54</publishTime>
+    </File>
+    <File Include="changePassword.aspx">
+      <publishTime>03/26/2019 15:17:46</publishTime>
+    </File>
+    <File Include="Css/MyCss3.css">
+      <publishTime>11/07/2018 17:22:42</publishTime>
+    </File>
+    <File Include="Css/PopUp.css">
+      <publishTime>12/21/2018 14:45:16</publishTime>
+    </File>
+    <File Include="Css/StyleAdd.css">
+      <publishTime>03/18/2019 11:14:31</publishTime>
+    </File>
+    <File Include="Cusmsgbox/Cusmsgbox.css">
+      <publishTime>12/21/2018 14:51:58</publishTime>
+    </File>
+    <File Include="Cusmsgbox/Cusmsgbox.js">
+      <publishTime>05/10/2015 14:23:32</publishTime>
+    </File>
+    <File Include="Diagnosa.aspx">
+      <publishTime>03/25/2019 13:57:13</publishTime>
+    </File>
+    <File Include="Discharge.aspx">
+      <publishTime>03/26/2019 15:02:33</publishTime>
+    </File>
+    <File Include="Eligibility.aspx">
+      <publishTime>03/26/2019 14:55:50</publishTime>
+    </File>
+    <File Include="fancybox/fancy_closebox.png">
+      <publishTime>12/17/2014 13:39:44</publishTime>
+    </File>
+    <File Include="fancybox/fancy_left.png">
+      <publishTime>12/17/2014 13:39:44</publishTime>
+    </File>
+    <File Include="fancybox/fancy_progress.png">
+      <publishTime>12/17/2014 13:39:44</publishTime>
+    </File>
+    <File Include="fancybox/fancy_right.png">
+      <publishTime>12/17/2014 13:39:44</publishTime>
+    </File>
+    <File Include="fancybox/fancy_shadow_e.png">
+      <publishTime>12/17/2014 13:39:44</publishTime>
+    </File>
+    <File Include="fancybox/fancy_shadow_n.png">
+      <publishTime>12/17/2014 13:39:50</publishTime>
+    </File>
+    <File Include="fancybox/fancy_shadow_ne.png">
+      <publishTime>12/17/2014 13:39:50</publishTime>
+    </File>
+    <File Include="fancybox/fancy_shadow_nw.png">
+      <publishTime>12/17/2014 13:39:52</publishTime>
+    </File>
+    <File Include="fancybox/fancy_shadow_s.png">
+      <publishTime>12/17/2014 13:39:52</publishTime>
+    </File>
+    <File Include="fancybox/fancy_shadow_se.png">
+      <publishTime>12/17/2014 13:39:52</publishTime>
+    </File>
+    <File Include="fancybox/fancy_shadow_sw.png">
+      <publishTime>12/17/2014 13:39:52</publishTime>
+    </File>
+    <File Include="fancybox/fancy_shadow_w.png">
+      <publishTime>12/17/2014 13:39:52</publishTime>
+    </File>
+    <File Include="fancybox/fancy_title_left.png">
+      <publishTime>12/17/2014 13:39:52</publishTime>
+    </File>
+    <File Include="fancybox/fancy_title_main.png">
+      <publishTime>12/17/2014 13:39:52</publishTime>
+    </File>
+    <File Include="fancybox/fancy_title_right.png">
+      <publishTime>12/17/2014 13:39:52</publishTime>
+    </File>
+    <File Include="fancybox/jquery-ui1.7.2.css">
+      <publishTime>01/28/2015 09:41:38</publishTime>
+    </File>
+    <File Include="fancybox/jquery.fancybox-1.2.6.css">
+      <publishTime>04/08/2015 16:27:26</publishTime>
+    </File>
+    <File Include="fancybox/jquery.fancybox-1.2.6.pack.js">
+      <publishTime>04/08/2015 16:40:40</publishTime>
+    </File>
+    <File Include="fancybox/readme.txt">
+      <publishTime>01/16/2015 10:35:20</publishTime>
+    </File>
+    <File Include="fancybox/script.js">
+      <publishTime>02/25/2015 16:17:28</publishTime>
+    </File>
+    <File Include="GenerateProvider.aspx">
+      <publishTime>03/25/2019 16:07:57</publishTime>
+    </File>
+    <File Include="History1.aspx">
+      <publishTime>12/18/2018 17:31:50</publishTime>
+    </File>
+    <File Include="Home.aspx">
+      <publishTime>03/06/2019 14:20:20</publishTime>
+    </File>
+    <File Include="images/Alert.png">
+      <publishTime>11/26/2014 08:53:38</publishTime>
+    </File>
+    <File Include="images/background.png">
+      <publishTime>12/19/2018 11:34:48</publishTime>
+    </File>
+    <File Include="images/Background1.png">
+      <publishTime>12/11/2018 09:33:40</publishTime>
+    </File>
+    <File Include="images/Background2.png">
+      <publishTime>12/11/2018 09:34:18</publishTime>
+    </File>
+    <File Include="images/Background3.png">
+      <publishTime>12/11/2018 09:35:40</publishTime>
+    </File>
+    <File Include="images/Banner.png">
+      <publishTime>12/11/2018 09:31:26</publishTime>
+    </File>
+    <File Include="images/exclamation.png">
+      <publishTime>11/26/2014 09:08:48</publishTime>
+    </File>
+    <File Include="images/icon.png">
+      <publishTime>12/11/2018 09:24:04</publishTime>
+    </File>
+    <File Include="images/information.png">
+      <publishTime>11/26/2014 08:50:24</publishTime>
+    </File>
+    <File Include="images/loader.gif">
+      <publishTime>02/09/2015 16:28:30</publishTime>
+    </File>
+    <File Include="images/logo.png">
+      <publishTime>12/11/2018 09:31:26</publishTime>
+    </File>
+    <File Include="images/logogs.png">
+      <publishTime>12/11/2018 09:31:26</publishTime>
+    </File>
+    <File Include="images/logoname.png">
+      <publishTime>12/11/2018 09:43:26</publishTime>
+    </File>
+    <File Include="images/Question.png">
+      <publishTime>11/26/2014 09:14:28</publishTime>
+    </File>
+    <File Include="Jscript/jquery1.2.3.js">
+      <publishTime>04/22/2015 21:00:12</publishTime>
+    </File>
+    <File Include="Jscript/jQuery1.8.3.js">
+      <publishTime>04/22/2015 21:00:12</publishTime>
+    </File>
+    <File Include="Jscript/JScript.js">
+      <publishTime>11/09/2018 15:38:20</publishTime>
+    </File>
+    <File Include="Loading/Loading.css">
+      <publishTime>12/18/2018 16:44:38</publishTime>
+    </File>
+    <File Include="Loading/Loading.js">
+      <publishTime>05/25/2015 19:26:34</publishTime>
+    </File>
+    <File Include="Login.aspx">
+      <publishTime>03/25/2019 15:19:20</publishTime>
+    </File>
+    <File Include="MemberLimitBenefit.aspx">
+      <publishTime>03/26/2019 14:48:14</publishTime>
+    </File>
+    <File Include="PolBenefit.aspx">
+      <publishTime>03/25/2019 15:22:39</publishTime>
+    </File>
+    <File Include="PolicyMemberAdmin.aspx">
+      <publishTime>01/02/2019 16:33:44</publishTime>
+    </File>
+    <File Include="Report/dsFormRegistrasi.xsc">
+      <publishTime>03/28/2019 10:40:16</publishTime>
+    </File>
+    <File Include="Report/dsFormRegistrasi.xss">
+      <publishTime>03/28/2019 10:40:16</publishTime>
+    </File>
+    <File Include="Report/dsRptFima.xsc">
+      <publishTime>03/04/2019 15:07:12</publishTime>
+    </File>
+    <File Include="Report/dsRptFima.xss">
+      <publishTime>03/04/2019 15:07:12</publishTime>
+    </File>
+    <File Include="Report/dsRptFKC.xsc">
+      <publishTime>03/04/2019 09:37:21</publishTime>
+    </File>
+    <File Include="Report/dsRptFKC.xss">
+      <publishTime>03/04/2019 09:37:21</publishTime>
+    </File>
+    <File Include="Report/dsRptSuratPernyataan.xsc">
+      <publishTime>03/04/2019 11:57:20</publishTime>
+    </File>
+    <File Include="Report/dsRptSuratPernyataan.xss">
+      <publishTime>03/04/2019 11:57:20</publishTime>
+    </File>
+    <File Include="Report/ReportDataSet.xsc">
+      <publishTime>03/01/2019 10:43:34</publishTime>
+    </File>
+    <File Include="Report/ReportDataSet.xss">
+      <publishTime>03/01/2019 10:43:34</publishTime>
+    </File>
+    <File Include="Report/ReportIsomedikDataSet.xsc">
+      <publishTime>03/19/2019 09:09:02</publishTime>
+    </File>
+    <File Include="Report/ReportIsomedikDataSet.xss">
+      <publishTime>03/19/2019 09:09:02</publishTime>
+    </File>
+    <File Include="ReportTop10Provider.aspx">
+      <publishTime>12/11/2018 09:11:10</publishTime>
+    </File>
+    <File Include="resetPassword.aspx">
+      <publishTime>03/25/2019 15:21:59</publishTime>
+    </File>
+    <File Include="Site.Master">
+      <publishTime>03/25/2019 15:19:57</publishTime>
+    </File>
+    <File Include="TransactionList.aspx">
+      <publishTime>03/26/2019 19:25:18</publishTime>
+    </File>
+    <File Include="UserDetail1.aspx">
+      <publishTime>03/25/2019 15:55:37</publishTime>
+    </File>
+    <File Include="UserList.aspx">
+      <publishTime>03/26/2019 15:17:42</publishTime>
+    </File>
+    <File Include="UserListProvider.aspx">
+      <publishTime>03/26/2019 15:17:44</publishTime>
+    </File>
+    <File Include="UserMAPProvider.aspx">
+      <publishTime>03/25/2019 15:33:25</publishTime>
+    </File>
+    <File Include="UserProfile.aspx">
+      <publishTime>03/25/2019 15:56:30</publishTime>
+    </File>
+    <File Include="UserRole.aspx">
+      <publishTime>03/25/2019 14:54:50</publishTime>
+    </File>
+    <File Include="Verification.aspx">
+      <publishTime>12/11/2018 09:11:10</publishTime>
+    </File>
+    <File Include="ViewDischarge.aspx">
+      <publishTime>03/25/2019 15:55:47</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>03/28/2019 13:32:39</publishTime>
+    </File>
+    <File Include="WebForm1.aspx">
+      <publishTime>12/11/2018 09:11:10</publishTime>
+    </File>
+    <File Include="WebTest.asmx">
+      <publishTime>02/20/2019 15:37:39</publishTime>
+    </File>
+    <File Include="WebViewer.aspx">
+      <publishTime>03/28/2019 13:08:35</publishTime>
+    </File>
+    <File Include="WebViewer2.aspx">
+      <publishTime>03/28/2019 09:15:15</publishTime>
+    </File>
+    <File Include="WebViewerExport.aspx">
+      <publishTime>12/11/2018 09:11:10</publishTime>
+    </File>
+    <File Include="WebViewerExportExcel.aspx">
+      <publishTime>03/26/2019 10:39:54</publishTime>
+    </File>
+    <File Include="WinView.aspx">
+      <publishTime>12/11/2018 09:11:10</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

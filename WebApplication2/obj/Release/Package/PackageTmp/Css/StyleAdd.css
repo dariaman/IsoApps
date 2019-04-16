@@ -1,0 +1,158 @@
+﻿
+    /*AutoComplete flyout */
+   .completionList
+{
+    list-style-type: none;
+    padding-left: 0px;
+    background-color: Blue;
+    font-family: Arial, Helvetica, Sans-Serif;
+    font-size: 12px;
+    border: 1px solid #578910;
+    margin-top: 2px;
+    max-height:200px;
+
+    width:400px;
+	/*height:350px;*/
+	/*overflow-y:scroll;*/
+}
+
+.completionListItem
+{
+    background-color: White;
+    padding: 5px 5px 5px 7px;
+    border-top: 1px solid #578910;
+    width:400px;
+    
+}
+
+.completionListHighlightedItem
+{
+    background-color: #578910;
+    color: White;
+    padding: 5px 5px 5px 7px;
+	 width:400px;
+}
+
+#AutoCompleteElement 
+{
+    width:400px;
+}
+
+#AutoCompleteElement div
+{
+    width:400px;
+	/*height:200px;
+	overflow-y:scroll;*/
+}
+
+.fa-lg 
+{
+	color:aqua;
+}
+#DivBody,#DivBody1 {
+    margin: 0.1%;
+    /*padding: 10px; background: #004080;*/
+    /*height:100%;*/
+    border-width: 1px;
+    /*border-color: inherit;*/
+    /*overflow-y: auto;*/
+    /*overflow-x: auto;*/
+    /*height: 450px;*/
+    /*background: #efefef;*/
+    list-style: none;
+    background-image:none;
+    /*background-image: url('../Images/Background.png');*/
+    background-repeat: no-repeat;
+    -moz-border-radius: 1em 1em 1em 1em;
+    -webkit-border-radius: 1em 1em 1em 1em;
+    border-radius: 1em 1em 1em 1em;
+    background-position: center;
+	padding-left:20px;
+    
+}
+#DivBody1
+{
+	padding-left:50px;
+}
+
+.calender-btn.active,.calender-btn.focus,.calender-btn:active,.calender-btn:focus,.calender-btn:hover,.open>.dropdown-toggle.calender-btn{color:#004080;cursor:pointer;background-color:#449d44;border-color:#398439}
+.calender-btn.active,.calender-btn:active,.open>.dropdown-toggle.calender-btn{background-image:none}
+.calender-btn.disabled,.calender-btn.disabled.active,.calender-btn.disabled.focus,.calender-btn.disabled:active,.calender-btn.disabled:focus,.calender-btn.disabled:hover,.calender-btn[disabled],.calender-btn[disabled].active,.calender-btn[disabled].focus,.calender-btn[disabled]:active,.calender-btn[disabled]:focus,.calender-btn[disabled]:hover,fieldset[disabled] .calender-btn,fieldset[disabled] .calender-btn.active,fieldset[disabled] .calender-btn.focus,fieldset[disabled] .calender-btn:active,fieldset[disabled] .calender-btn:focus,fieldset[disabled] .calender-btn:hover{background-color:#5cb85c;border-color:#4cae4c}
+.calender-btn {color:#5cb85c;background-color:#004080}
+
+.cal_Theme1 .ajax__calendar_container {
+    background-color: #DEF1F4;
+    border: solid 1px #77D5F7;
+    background: #DEF1F4;
+    background: linear-gradient(top, #DEF1F4 0%, #ffffff 100%);
+    background: -moz-linear-gradient(top, #DEF1F4 0%, #ffffff 100%);
+    background: -webkit-linear-gradient(top, #DEF1F4 0%,#ffffff 100%);
+}
+
+.cal_Theme1 .ajax__calendar_header {
+    background-color: #ffffff;
+    margin-bottom: 4px;
+}
+
+.cal_Theme1 .ajax__calendar_title,
+.cal_Theme1 .ajax__calendar_next,
+.cal_Theme1 .ajax__calendar_prev {
+    color: #004080;
+    padding-top: 3px;
+}
+
+.cal_Theme1 .ajax__calendar_body {
+    background-color: #ffffff;
+    border: solid 1px #77D5F7;
+}
+
+.cal_Theme1 .ajax__calendar_dayname {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 4px;
+    margin-top: 2px;
+    color: #004080;
+}
+
+.cal_Theme1 .ajax__calendar_day {
+    color: #004080;
+    text-align: center;
+}
+
+.cal_Theme1 .ajax__calendar_hover .ajax__calendar_day,
+.cal_Theme1 .ajax__calendar_hover .ajax__calendar_month,
+.cal_Theme1 .ajax__calendar_hover .ajax__calendar_year,
+.cal_Theme1 .ajax__calendar_active {
+    color: #004080;
+    font-weight: bold;
+    background-color: #DEF1F4;
+}
+
+.cal_Theme1 .ajax__calendar_today {
+    font-weight: bold;
+}
+
+.cal_Theme1 .ajax__calendar_other,
+.cal_Theme1 .ajax__calendar_hover .ajax__calendar_today,
+.cal_Theme1 .ajax__calendar_hover .ajax__calendar_title {
+    color: #bbbbbb;
+}
+.table
+{
+	background-color:#DEF1F4;
+}
+
+.box-header
+{
+	background-color:#dcdcdc;
+	padding-left:20px;
+	width:99%;
+	height:30px;
+	font-size:5px;
+}
+@media (min-width:250px){#DivBody{height:450px;overflow-y: scroll;overflow-x: hidden;}}
+@media (min-width:768px){#DivBody{height:450px;overflow-y: scroll;overflow-x: hidden;}}
+@media (min-width:992px){#DivBody{height:500px;overflow-y: scroll;overflow-x: hidden;}}
+@media (min-width:1200px){#DivBody{height:550px;overflow-y: scroll;overflow-x: hidden;}}
+@media (min-width:1700px){#DivBody{height:550px;overflow-y: scroll;overflow-x: hidden;}}
+    

@@ -86,3 +86,11 @@ E:\source code\paling update\WebApplication2 - Isomedik\WebService1\obj\Debug\We
 E:\source code\paling update\WebApplication2 - Isomedik\WebService1\obj\Debug\WebService.dll
 E:\source code\paling update\WebApplication2 - Isomedik\WebService1\obj\Debug\WebService.xml
 E:\source code\paling update\WebApplication2 - Isomedik\WebService1\obj\Debug\WebService.pdb
+D:\Proj\WebApplication2 - Isomedik\WebService1\bin\WebService.pdb
+D:\Proj\WebApplication2 - Isomedik\WebService1\bin\WebService.xml
+D:\Proj\WebApplication2 - Isomedik\WebService1\obj\Debug\WebService.vbprojResolveAssemblyReference.cache
+D:\Proj\WebApplication2 - Isomedik\WebService1\obj\Debug\WebService.Resources.resources
+D:\Proj\WebApplication2 - Isomedik\WebService1\obj\Debug\WebService.vbproj.GenerateResource.Cache
+D:\Proj\WebApplication2 - Isomedik\WebService1\obj\Debug\WebService.dll
+D:\Proj\WebApplication2 - Isomedik\WebService1\obj\Debug\WebService.xml
+D:\Proj\WebApplication2 - Isomedik\WebService1\obj\Debug\WebService.pdb

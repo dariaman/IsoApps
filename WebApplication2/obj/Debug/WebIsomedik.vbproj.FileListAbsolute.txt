@@ -49,3 +49,20 @@ E:\source code\paling update\WebApplication2 - Isomedik\WebApplication2\bin\WebS
 E:\source code\WebApplication2 - Isomedik\WebApplication2\bin\Site.Master
 E:\source code\WebApplication2 - Isomedik\WebApplication2\bin\Site.Master.designer.vb
 E:\source code\WebApplication2 - Isomedik\WebApplication2\bin\Site.Master.vb
+D:\Proj\WebApplication2 - Isomedik\WebApplication2\bin\Site.Master
+D:\Proj\WebApplication2 - Isomedik\WebApplication2\bin\Site.Master.designer.vb
+D:\Proj\WebApplication2 - Isomedik\WebApplication2\bin\Site.Master.vb
+D:\Proj\WebApplication2 - Isomedik\WebApplication2\bin\WebIsomedik.dll
+D:\Proj\WebApplication2 - Isomedik\WebApplication2\bin\WebIsomedik.pdb
+D:\Proj\WebApplication2 - Isomedik\WebApplication2\bin\WebIsomedik.xml
+D:\Proj\WebApplication2 - Isomedik\WebApplication2\bin\WebService.dll
+D:\Proj\WebApplication2 - Isomedik\WebApplication2\bin\WebService.pdb
+D:\Proj\WebApplication2 - Isomedik\WebApplication2\bin\WebService.xml
+D:\Proj\WebApplication2 - Isomedik\WebApplication2\obj\Debug\WebIsomedik.vbprojResolveAssemblyReference.cache
+D:\Proj\WebApplication2 - Isomedik\WebApplication2\obj\Debug\WebIsomedik.Resources.resources
+D:\Proj\WebApplication2 - Isomedik\WebApplication2\obj\Debug\WebIsomedik.vbproj.GenerateResource.Cache
+D:\Proj\WebApplication2 - Isomedik\WebApplication2\obj\Debug\RdlCompile.cache
+D:\Proj\WebApplication2 - Isomedik\WebApplication2\obj\Debug\RdlCompile.compiled
+D:\Proj\WebApplication2 - Isomedik\WebApplication2\obj\Debug\WebIsomedik.dll
+D:\Proj\WebApplication2 - Isomedik\WebApplication2\obj\Debug\WebIsomedik.xml
+D:\Proj\WebApplication2 - Isomedik\WebApplication2\obj\Debug\WebIsomedik.pdb

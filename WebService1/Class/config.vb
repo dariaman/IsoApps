@@ -24,6 +24,12 @@
         End Get
     End Property
 
+    Public Shared ReadOnly Property RelIsomedikConn() As String
+        Get
+            Return System.Configuration.ConfigurationManager.ConnectionStrings("RelIsomedik").ConnectionString
+        End Get
+    End Property
+
     Public Shared ReadOnly Property CelcomConnection() As String
         Get
             Return System.Configuration.ConfigurationManager.ConnectionStrings("Celcom").ConnectionString

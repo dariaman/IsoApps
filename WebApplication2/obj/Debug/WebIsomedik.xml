@@ -6,7 +6,71 @@ WebIsomedik
 </name>
 </assembly>
 <members>
-<member name="F:WebIsomedik.ReportTop10Provider.PnlPolicy">
+<member name="F:WebIsomedik.AddMappingProvider._lbl_header">
+	<summary>
+_lbl_header control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:WebIsomedik.AddMappingProvider.ddlinternal">
+	<summary>
+ddlinternal control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:WebIsomedik.AddMappingProvider.ddleksternal">
+	<summary>
+ddleksternal control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:WebIsomedik.AddMappingProvider._btnsimpan">
+	<summary>
+_btnsimpan control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:WebIsomedik.AddMappingProvider.btn_cancel">
+	<summary>
+btn_cancel control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:WebIsomedik.Batching._lbl_header">
+	<summary>
+_lbl_header control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:WebIsomedik.Batching.batching_gv">
+	<summary>
+batching_gv control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:WebIsomedik.Batching.btn_save_batch">
+	<summary>
+btn_save_batch control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:WebIsomedik.ReportTop10Provider.PnlPolicy">
 	<summary>
 PnlPolicy control.
 </summary>
@@ -3664,46 +3728,6 @@ btnLogin control.
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
-</member><member name="T:WebIsomedik.dsFormRegistrasi.USP_RPT_FORM_REGISTRASI_HEADERDataTable">
-	<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member><member name="T:WebIsomedik.dsFormRegistrasi.USP_RPT_FORM_REGISTRASI_DETAILDataTable">
-	<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member><member name="T:WebIsomedik.dsFormRegistrasi.USP_RPT_FORM_REGISTRASIDataTable">
-	<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member><member name="T:WebIsomedik.dsFormRegistrasi.USP_RPT_FORM_REGISTRASI_HEADERRow">
-	<summary>
-Represents strongly named DataRow class.
-</summary>
-</member><member name="T:WebIsomedik.dsFormRegistrasi.USP_RPT_FORM_REGISTRASI_DETAILRow">
-	<summary>
-Represents strongly named DataRow class.
-</summary>
-</member><member name="T:WebIsomedik.dsFormRegistrasi.USP_RPT_FORM_REGISTRASIRow">
-	<summary>
-Represents strongly named DataRow class.
-</summary>
-</member><member name="T:WebIsomedik.dsFormRegistrasi.USP_RPT_FORM_REGISTRASI_HEADERRowChangeEvent">
-	<summary>
-Row event argument class
-</summary>
-</member><member name="T:WebIsomedik.dsFormRegistrasi.USP_RPT_FORM_REGISTRASI_DETAILRowChangeEvent">
-	<summary>
-Row event argument class
-</summary>
-</member><member name="T:WebIsomedik.dsFormRegistrasi.USP_RPT_FORM_REGISTRASIRowChangeEvent">
-	<summary>
-Row event argument class
-</summary>
-</member><member name="T:WebIsomedik.dsFormRegistrasi">
-	<summary>
-Represents a strongly typed in-memory cache of data.
-</summary>
 </member><member name="F:WebIsomedik.UserMAPProvider.PnlMain">
 	<summary>
 PnlMain control.
@@ -4083,6 +4107,30 @@ To modify move field declaration from designer file to code-behind file.
 </member><member name="F:WebIsomedik.Branch.btnSave">
 	<summary>
 btnSave control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:WebIsomedik.ProviderMapping._lbl_header">
+	<summary>
+_lbl_header control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:WebIsomedik.ProviderMapping.btn_add_mapping">
+	<summary>
+btn_add_mapping control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:WebIsomedik.ProviderMapping.provider_mapping_gv">
+	<summary>
+provider_mapping_gv control.
 </summary>
 	<remarks>
 Auto-generated field.

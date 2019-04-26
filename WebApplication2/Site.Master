@@ -37,7 +37,6 @@
 
 <script src="bootstraps/excanvas.js"></script> 
 <script src="bootstraps/jQuery.1.7.2.js"></script> 
-<script src="bootstraps/jQueryUI.1.8.21.js"></script> 
 <script src="bootstraps/bootstrap.js"></script> 
 <script src="bootstraps/jQuery.0.7.js"></script> 
 <script src="bootstraps/jquery_005.js"></script> 

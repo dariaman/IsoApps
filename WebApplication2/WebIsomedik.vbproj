@@ -13,7 +13,7 @@
     <OutputType>Library</OutputType>
     <RootNamespace>WebIsomedik</RootNamespace>
     <AssemblyName>WebIsomedik</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <MyType>Custom</MyType>
     <UseIISExpress>false</UseIISExpress>
     <IISExpressSSLPort />
@@ -30,6 +30,7 @@
     <OutputPath>bin\</OutputPath>
     <DocumentationFile>WebIsomedik.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -39,6 +40,7 @@
     <OutputPath>bin\</OutputPath>
     <DocumentationFile>WebIsomedik.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="AjaxControlToolkit, Version=4.1.60919.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
@@ -55,12 +57,12 @@
     <Reference Include="System.Device" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Management" />
-    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
@@ -94,6 +96,8 @@
     <Import Include="System.Web.UI.HtmlControls" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AddMappingProvider.aspx" />
+    <Content Include="Batching.aspx" />
     <Content Include="bootstraps\bootstrap-datetimepicker.4.7.14.min.css" />
     <Content Include="bootstraps\bootstrap-responsive.css" />
     <Content Include="bootstraps\bootstrap.css" />
@@ -163,6 +167,7 @@
     <Content Include="MemberLimitBenefit.aspx" />
     <Content Include="PolBenefit.aspx" />
     <Content Include="PolicyMemberAdmin.aspx" />
+    <Content Include="ProviderMapping.aspx" />
     <Content Include="ReportTop10Provider.aspx" />
     <Content Include="TransactionList.aspx" />
     <Content Include="UserMAPProvider.aspx" />
@@ -226,6 +231,20 @@
     <Content Include="WinView.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddMappingProvider.aspx.designer.vb">
+      <DependentUpon>AddMappingProvider.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AddMappingProvider.aspx.vb">
+      <DependentUpon>AddMappingProvider.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Batching.aspx.designer.vb">
+      <DependentUpon>Batching.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Batching.aspx.vb">
+      <DependentUpon>Batching.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="Branch.aspx.designer.vb">
       <DependentUpon>Branch.aspx</DependentUpon>
     </Compile>
@@ -290,17 +309,19 @@
       <DependentUpon>PolicyMemberAdmin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="ProviderMapping.aspx.designer.vb">
+      <DependentUpon>ProviderMapping.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProviderMapping.aspx.vb">
+      <DependentUpon>ProviderMapping.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="ReportTop10Provider.aspx.designer.vb">
       <DependentUpon>ReportTop10Provider.aspx</DependentUpon>
     </Compile>
     <Compile Include="ReportTop10Provider.aspx.vb">
       <DependentUpon>ReportTop10Provider.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Report\dsFormRegistrasi.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>dsFormRegistrasi.xsd</DependentUpon>
     </Compile>
     <Compile Include="Report\dsRptFima.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -532,17 +553,6 @@
     <Content Include="Report\ReportDataSet.xsc">
       <DependentUpon>ReportDataSet.xsd</DependentUpon>
     </Content>
-    <Content Include="Report\dsFormRegistrasi.xsc">
-      <DependentUpon>dsFormRegistrasi.xsd</DependentUpon>
-    </Content>
-    <None Include="Report\dsFormRegistrasi.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>dsFormRegistrasi.Designer.vb</LastGenOutput>
-    </None>
-    <Content Include="Report\dsFormRegistrasi.xss">
-      <DependentUpon>dsFormRegistrasi.xsd</DependentUpon>
-    </Content>
     <Content Include="Report\dsRptFKC.xsc">
       <DependentUpon>dsRptFKC.xsd</DependentUpon>
     </Content>
@@ -618,7 +628,7 @@
     <OptionExplicit>On</OptionExplicit>
   </PropertyGroup>
   <PropertyGroup>
-    <OptionCompare>Binary</OptionCompare>
+    <OptionCompare>Text</OptionCompare>
   </PropertyGroup>
   <PropertyGroup>
     <OptionStrict>Off</OptionStrict>

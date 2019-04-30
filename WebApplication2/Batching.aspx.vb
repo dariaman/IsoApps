@@ -35,19 +35,19 @@ Public Class Batching
         cmd.Connection = con
         cmd.CommandType = CommandType.StoredProcedure
         cmd.CommandText = "SP_OUTSTANDING_CLAIM_BATCH_LIST"
-        cmd.Parameters.Clear()
-        cmd.Parameters.Add("@Page_no", SqlDbType.Int)
-        cmd.Parameters("@Page_no").Value = Page_no
-        cmd.Parameters.Add("@filter", SqlDbType.VarChar)
-        cmd.Parameters("@filter").Value = ""
-        cmd.Parameters.Add("@totalrow", SqlDbType.Int)
-        cmd.Parameters("@totalrow").Direction = ParameterDirection.Output
+        'cmd.Parameters.Clear()
+        'cmd.Parameters.Add("@Page_no", SqlDbType.Int)
+        'cmd.Parameters("@Page_no").Value = Page_no
+        'cmd.Parameters.Add("@filter", SqlDbType.VarChar)
+        'cmd.Parameters("@filter").Value = ""
+        'cmd.Parameters.Add("@totalrow", SqlDbType.Int)
+        'cmd.Parameters("@totalrow").Direction = ParameterDirection.Output
 
         Try
             con.Open()
             Dim da As New SqlDataAdapter(cmd)
             da.Fill(dt)
-            totaldata = Convert.ToInt32(cmd.Parameters.Item("@totalrow").Value)
+            'totaldata = Convert.ToInt32(cmd.Parameters.Item("@totalrow").Value)
         Catch ex As Exception
             Throw New Exception(ex.Message)
         Finally

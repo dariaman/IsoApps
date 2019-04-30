@@ -23,7 +23,7 @@ Public Class ProviderMapping
             Try
                 Dim totalrow As Integer = 0
                 provider_mapping_gv.DataSource = GetDataPaged(1, "", totalrow)
-                provider_mapping_gv.VirtualItemCount = totalrow
+                'provider_mapping_gv.VirtualItemCount = totalrow
                 provider_mapping_gv.DataBind()
             Catch ex As Exception
                 Throw New Exception(ex.Message)

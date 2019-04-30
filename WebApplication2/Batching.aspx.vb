@@ -18,7 +18,7 @@ Public Class Batching
             Try
                 Dim totalrow As Integer = 0
                 batching_gv.DataSource = GetDataPaged(1, "", totalrow)
-                batching_gv.VirtualItemCount = totalrow
+                'batching_gv.VirtualItemCount = totalrow
                 batching_gv.DataBind()
             Catch ex As Exception
                 Throw New Exception(ex.Message)

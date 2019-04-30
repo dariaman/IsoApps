@@ -15,7 +15,6 @@
             PageSize="10" 
             AllowSorting="true"
             AllowPaging="true" 
-            AllowCustomPaging="true"
             GridLines="Both"
             EmptyDataText="No data Found">
             <Columns>

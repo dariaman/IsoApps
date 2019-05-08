@@ -6,71 +6,7 @@ WebIsomedik
 </name>
 </assembly>
 <members>
-<member name="F:WebIsomedik.AddMappingProvider._lbl_header">
-	<summary>
-_lbl_header control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:WebIsomedik.AddMappingProvider.ddlinternal">
-	<summary>
-ddlinternal control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:WebIsomedik.AddMappingProvider.ddleksternal">
-	<summary>
-ddleksternal control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:WebIsomedik.AddMappingProvider._btnsimpan">
-	<summary>
-_btnsimpan control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:WebIsomedik.AddMappingProvider.btn_cancel">
-	<summary>
-btn_cancel control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:WebIsomedik.Batching._lbl_header">
-	<summary>
-_lbl_header control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:WebIsomedik.Batching.batching_gv">
-	<summary>
-batching_gv control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:WebIsomedik.Batching.btn_save_batch">
-	<summary>
-btn_save_batch control.
-</summary>
-	<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member><member name="F:WebIsomedik.ReportTop10Provider.PnlPolicy">
+<member name="F:WebIsomedik.ReportTop10Provider.PnlPolicy">
 	<summary>
 PnlPolicy control.
 </summary>
@@ -3728,6 +3664,46 @@ btnLogin control.
 Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
+</member><member name="F:WebIsomedik.AddMappingProvider._lbl_header">
+	<summary>
+_lbl_header control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:WebIsomedik.AddMappingProvider.ddlinternal">
+	<summary>
+ddlinternal control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:WebIsomedik.AddMappingProvider.ddleksternal">
+	<summary>
+ddleksternal control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:WebIsomedik.AddMappingProvider._btnsimpan">
+	<summary>
+_btnsimpan control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:WebIsomedik.AddMappingProvider.btn_cancel">
+	<summary>
+btn_cancel control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
 </member><member name="F:WebIsomedik.UserMAPProvider.PnlMain">
 	<summary>
 PnlMain control.
@@ -4107,6 +4083,30 @@ To modify move field declaration from designer file to code-behind file.
 </member><member name="F:WebIsomedik.Branch.btnSave">
 	<summary>
 btnSave control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:WebIsomedik.Batching._lbl_header">
+	<summary>
+_lbl_header control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:WebIsomedik.Batching.batching_gv">
+	<summary>
+batching_gv control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:WebIsomedik.Batching.btn_save_batch">
+	<summary>
+btn_save_batch control.
 </summary>
 	<remarks>
 Auto-generated field.

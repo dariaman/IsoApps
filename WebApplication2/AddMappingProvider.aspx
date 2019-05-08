@@ -25,7 +25,7 @@
                 </td>
                 <td class="auto-table31">
                     <div class="panel-body" style="text-align:left">                                                
-                    <asp:Button ID="_btnsimpan" CssClass="btn btn-success" runat="server" Text="Simpan Mapping" />
+                    <asp:Button ID="_btnsimpan" CssClass="btn btn-success" runat="server" Text="Simpan" />
                         <asp:Button ID="btn_cancel" CssClass="btn btn-primary" runat="server" Text="Batal" />                                                    
                     </div>
                 </td>

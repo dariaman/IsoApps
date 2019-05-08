@@ -14,6 +14,7 @@ Public Class Batching
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         If Page.IsPostBack Then
+            
         Else
             Try
                 Dim totalrow As Integer = 0
@@ -76,13 +77,21 @@ Public Class Batching
         Next
         If coltransid <> "" Then
             coltransid = coltransid.TrimEnd(",")
-            Submit_Batch(coltransid)
-            Response.Redirect("Batching.aspx")
+
+            Try
+                Submit_Batch(coltransid)
+                ClientScript.RegisterStartupScript(Me.GetType, "confirm", "<script language=javascript>jqxAlert.Information('Proses batching berhasil ');</script>")
+                batching_gv.DataSource = GetDataPaged(1, "", 0)
+                batching_gv.DataBind()
+            Catch ex As Exception
+                ClientScript.RegisterStartupScript(Me.GetType, "confirm", "<script language=javascript>jqxAlert.Information('" + ex.Message + "');</script>")
+            End Try
+            'Response.Redirect("Batching.aspx")
         End If
     End Sub
 
     Public Sub Submit_Batch(CollTransID As String)
-        Dim con As New SqlConnection(config.MSSQLConnection)
+        Dim con As New SqlConnection(config.RELIsomedikConnection)
         Dim cmd As New SqlCommand
         Dim dt As New DataTable
 
@@ -97,10 +106,31 @@ Public Class Batching
         Try
             con.Open()
             cmd.ExecuteNonQuery()
+        Catch ex As SqlException
+            Throw New Exception(ex.Message)
         Catch ex As Exception
             Throw New Exception(ex.Message)
         Finally
             con.Close()
         End Try
     End Sub
+
+    'Private Sub CheckState()
+    '    For Each row As GridViewRow In batching_gv.Rows
+    '        Dim tombol_add As CheckBox = TryCast(row.FindControl("chkSelected"), CheckBox)
+    '        'DirectCast(e.Row.FindControl("chkSelected"), CheckBox)
+    '    Next
+
+    '    'For Each GridViewRow As rw In ds
+    '    'Next
+    'End Sub
+
+    'private void CheckState(bool p)
+    '{
+    '    foreach (GridViewRow row in GridView1.Rows)
+    '   {
+    '       CheckBox chkcheck = (CheckBox)row.FindControl("chkid");
+    '             chkcheck.Checked = p;
+    '    }
+    '}
 End Class

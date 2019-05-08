@@ -14,22 +14,26 @@ Public Class AddMappingProvider
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         If Page.IsPostBack Then
         Else
-            bindProviderInternal()
+            If Not String.IsNullOrEmpty(Request.QueryString("idprovider")) Then
+                Dim ProviderID_internal As String = Request.QueryString("idprovider").ToString()
+                bindProviderInternal(CType(ProviderID_internal, Integer))
+            End If
+
             bindProviderEksternal()
         End If
     End Sub
 
-    Private Sub bindProviderInternal()
+    Private Sub bindProviderInternal(ID_provider_internal As Integer)
         Dim con As New SqlConnection(config.MSSQLConnection)
         Dim cmd As New SqlCommand
         Dim dt As New DataTable
 
         cmd.Connection = con
         cmd.CommandType = CommandType.Text
-        cmd.CommandText = "SELECT PROVIDERID,PROVIDERNAME FROM dbo.MSPROVIDERMASTER mp " & _
-                            "LEFT JOIN dbo.PROVIDER_MAPPING pmp ON pmp.PROVIDERID_ISOMEDIK=mp.PROVIDERID AND pmp.ISACTIVE=1 " & _
-                            "WHERE pmp.ID Is NULL " & _
-                            "ORDER BY mp.PROVIDERNAME"
+        cmd.CommandType = CommandType.StoredProcedure
+        cmd.CommandText = "SP_PROVIDER_INTERNAL_LIST"
+        cmd.Parameters.Clear()
+        cmd.Parameters.Add(New SqlParameter("@id_provider_internal", SqlDbType.Int) With {.Value = ID_provider_internal})
 
         Try
             con.Open()
@@ -54,10 +58,8 @@ Public Class AddMappingProvider
 
         cmd.Connection = con
         cmd.CommandType = CommandType.Text
-        cmd.CommandText = "SELECT PROVIDERID,PROVIDERNAME FROM rel.dbo.PRV_PROVIDER_MASTER mp " & _
-                            "LEFT JOIN dbo.PROVIDER_MAPPING pmp ON pmp.PROVIDERID_ISOMEDIK=mp.PROVIDERID AND pmp.ISACTIVE=1 " & _
-                            "WHERE pmp.ID Is NULL " & _
-                            "ORDER BY mp.PROVIDERNAME"
+        cmd.CommandType = CommandType.StoredProcedure
+        cmd.CommandText = "SP_PROVIDER_EKSTERNAL_LIST"
         Try
             con.Open()
             Dim sda As SqlDataAdapter = New SqlDataAdapter(cmd)

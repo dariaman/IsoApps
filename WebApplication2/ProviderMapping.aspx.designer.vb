@@ -23,6 +23,33 @@ Partial Public Class ProviderMapping
     Protected WithEvents _lbl_header As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
+    '''ddljenisProvider control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents ddljenisProvider As Global.System.Web.UI.WebControls.DropDownList
+
+    '''<summary>
+    '''txtnamaprovider control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents txtnamaprovider As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''btnSearch1 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents btnSearch1 As Global.System.Web.UI.WebControls.LinkButton
+
+    '''<summary>
     '''btn_add_mapping control.
     '''</summary>
     '''<remarks>

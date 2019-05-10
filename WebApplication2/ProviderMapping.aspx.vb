@@ -62,17 +62,17 @@ Public Class ProviderMapping
         Return dt
     End Function
 
-    'Private Sub provider_mapping_gv_PageIndexChanging(sender As Object, e As GridViewPageEventArgs) Handles provider_mapping_gv.PageIndexChanging
-    '    Dim halaman As Integer = e.NewPageIndex + 1
-    '    provider_mapping_gv.PageIndex = e.NewPageIndex
-    '    Dim totalrow As Integer = 0
-    '    Try
-    '        provider_mapping_gv.DataSource = GetDataPaged(halaman, "", totalrow)
-    '        provider_mapping_gv.DataBind()
-    '    Catch ex As Exception
-    '        Throw New Exception(ex.Message)
-    '    End Try
-    'End Sub
+    Private Sub provider_mapping_gv_PageIndexChanging(sender As Object, e As GridViewPageEventArgs) Handles provider_mapping_gv.PageIndexChanging
+        Dim halaman As Integer = e.NewPageIndex + 1
+        provider_mapping_gv.PageIndex = e.NewPageIndex
+        Dim totalrow As Integer = 0
+        Try
+            provider_mapping_gv.DataSource = GetDataPaged(halaman, "", totalrow)
+            provider_mapping_gv.DataBind()
+        Catch ex As Exception
+            Throw New Exception(ex.Message)
+        End Try
+    End Sub
 
     'Private Sub btn_add_mapping_Click(sender As Object, e As EventArgs) Handles btn_add_mapping.Click
     '    Response.Redirect("AddMappingProvider.aspx")

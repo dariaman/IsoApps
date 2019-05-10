@@ -62,6 +62,11 @@ Public Class TambahProvider
     End Sub
 
     Protected Sub _btnsimpan_Click(sender As Object, e As EventArgs) Handles _btnsimpan.Click
+        If txtnama.Text.Trim = "" Or txtAlamat1.Text.Trim = "" Then
+            ClientScript.RegisterStartupScript(Me.GetType, "confirm", "<script language=javascript>jqxAlert.Information('Nama Provider dan Alamat Gedung harus diisi');</script>")
+            Return
+        End If
+
         Dim con As New SqlConnection(config.MSSQLConnection)
         Dim cmd As New SqlCommand
 

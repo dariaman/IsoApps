@@ -52,7 +52,7 @@ Public Class resetPassword
 
     Private Sub SelectDataMSUserlike(type As String, userid As String)
         Try
-            gridMenu.DataSource = _Clsusers.SelectDataMSUserlike(type, userid, UserLogin.UserId.ToString)
+            gridMenu.DataSource = _Clsusers.SelectDataMSUserlike(type, userid)
             gridMenu.DataBind()
         Catch ex As Exception
 
@@ -65,7 +65,7 @@ Public Class resetPassword
         Try
             System.Threading.Thread.Sleep(500)
             gridMenu.PageIndex = 0
-            SelectDataMSUserlike(ddlSearch.SelectedValue, txtSearch.Text)
+            SelectDataMSUserlike(ddlSearch.SelectedValue.Trim, txtSearch.Text.Trim)
         Catch ex As Exception
             ClientScript.RegisterStartupScript(Me.GetType, "confirm", "<script language=javascript>jqxAlert.Alert('Error!, " & ex.Message.ToString & vbCrLf & Environment.NewLine & "');</script>")
             Dim msg As String = String.Format("{0} - resetPassword - " & UserLogin.UserId & " - {1} - {2}{3}", Now.ToString("dd/MM/yyyy HH:mm:ss"), UserLogin.BranchCode, ex, Environment.NewLine)

@@ -52,24 +52,17 @@
                                             <asp:TemplateField HeaderText="Peserta" HeaderStyle-Width="18%" >
                                                 <ItemTemplate>
                                                     <%# DataBinder.Eval(Container.DataItem, "MEMBID")%> -  <%# DataBinder.Eval(Container.DataItem, "FULLNAME")%>
+                                                    <br />
+                                                    Jenis Kelamin : <%# DataBinder.Eval(Container.DataItem, "SEXNM1")%><br />
+                                                    Tanggal Lahir : <%# DataBinder.Eval(Container.DataItem, "BIRTHDATE")%>
                                                 </ItemTemplate>
-                                            </asp:TemplateField>
-                                            <asp:TemplateField HeaderText="Jenis Kelamin" HeaderStyle-Width="5%" >
-                                                <ItemTemplate>
-                                                    <%# DataBinder.Eval(Container.DataItem, "SEXNM1")%>
-                                                </ItemTemplate>
-                                            </asp:TemplateField>
-                                            <asp:TemplateField HeaderText="Tanggal Lahir" HeaderStyle-Width="8%" >
-                                                <ItemTemplate>
-                                                    <%# DataBinder.Eval(Container.DataItem, "BIRTHDATE")%>
-                                                </ItemTemplate>
-                                            </asp:TemplateField>
+                                            </asp:TemplateField>                                            
                                             <asp:TemplateField HeaderText="Hubungan" HeaderStyle-Width="8%" >
                                                 <ItemTemplate>
                                                     <%# DataBinder.Eval(Container.DataItem, "RELSHIPNM1")%>
                                                 </ItemTemplate>
                                             </asp:TemplateField>
-                                            <asp:TemplateField HeaderText="No Kaywawan" HeaderStyle-Width="10%" >
+                                            <asp:TemplateField HeaderText="No Karyawan" HeaderStyle-Width="10%" >
                                                 <ItemTemplate>
                                                     <%# DataBinder.Eval(Container.DataItem, "EMPLOYEEID")%>
                                                 </ItemTemplate>
@@ -89,6 +82,12 @@
                                                     <%# DataBinder.Eval(Container.DataItem, "EXPDT", "{0:yyyy-MM-dd}")%>
                                                 </ItemTemplate>
                                             </asp:TemplateField>
+                                            <asp:TemplateField HeaderText="No.BPJS - FKTP" HeaderStyle-Width="13%" >
+                                                <ItemTemplate>
+                                                    No. BPJS :<%# DataBinder.Eval(Container.DataItem, "USERFIELD9")%><br />
+                                                    FKTP     :<%# DataBinder.Eval(Container.DataItem, "USERFIELD10")%>
+                                                </ItemTemplate>
+                                            </asp:TemplateField>                                            
                                             <%--<asp:TemplateField HeaderText="FREE SERVICE" HeaderStyle-Width="5%" >
                                                 <ItemTemplate>
                                                     <%# DataBinder.Eval(Container.DataItem, "FREE_SERVICE")%>                                                    
@@ -134,7 +133,7 @@
                                         </asp:TemplateField>                                        
                                         <asp:TemplateField HeaderText="DETAIL" ItemStyle-ForeColor="#0000FF" ItemStyle-HorizontalAlign="Left" HeaderStyle-Width="10%" >
                                             <ItemTemplate>
-                                                <asp:LinkButton ID="ImgViewUserId" runat="server" CausesValidation="False" CommandArgument='<%# DataBinder.Eval(Container.DataItem, "subprodid")%>' CommandName="SelectLink"><i class='fa fa-edit fa-fw'></i> View DETAIL</asp:LinkButton>
+                                                <asp:LinkButton ID="ImgViewUserId" runat="server" CausesValidation="False" CommandArgument='<%# DataBinder.Eval(Container.DataItem, "subprodid")%>' CommandName="SelectLink"><i class='fa fa-edit fa-fw'></i> Lihat Detail</asp:LinkButton>
                                             </ItemTemplate>
                                         </asp:TemplateField>                                            
                                     </Columns>
@@ -189,7 +188,7 @@
                 <div class="col-sm-12">                    
                     <div class="box box-info">
                         <div class="box-header">
-                            <h3 class="box-title">Daftar Maanfaat COB</h3>
+                            <h3 class="box-title">Daftar Manfaat COB</h3>
                         </div>
                         <div class="panel-body">
                             <div class="dataTable_wrapper">

@@ -94,7 +94,7 @@ Public Class Eligibility
                             _mv1.ActiveViewIndex = 0
 
 
-                            If (roleCode = "00001" Or roleCode = "00002") Then
+                            If (roleCode = "00001" Or roleCode = "00002" Or roleCode = "00006") Then
                                 _pnl_provider.Visible = True
                                 providerName.Focus()
                             Else
@@ -150,7 +150,7 @@ Public Class Eligibility
             cardNo = _tbCardNo.Text.Trim
             referral = _tbreferral.Text.Trim
 
-            If (roleCode = "00001" Or roleCode = "00002") Then
+            If (roleCode = "00001" Or roleCode = "00002" Or roleCode = "00006") Then
                 If providerName.Text.Trim = "" Then
                     ClientScript.RegisterStartupScript(Me.GetType, "confirm", "<script language=javascript>jqxAlert.Information('Provider belum diisi');</script>")
                     Exit Sub
@@ -160,7 +160,7 @@ Public Class Eligibility
                         Exit Sub
                     End If
                 End If
-                prvid = Left(providerName.Text, 10).Trim()                
+                prvid = Left(providerName.Text, 10).Trim()
                 Session.Add("EligibleProvider", prvid)
             End If
 
@@ -187,7 +187,7 @@ Public Class Eligibility
             Dim roleCode As String = UserLogin.RoleCode
             Dim providerId As String = UserLogin.providerid
 
-            If (roleCode = "00001" Or roleCode = "00002") Then
+            If (roleCode = "00001" Or roleCode = "00002" Or roleCode = "00006") Then
                 providerId = Session("EligibleProvider")
             End If
 

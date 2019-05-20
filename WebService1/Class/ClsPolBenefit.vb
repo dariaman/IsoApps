@@ -57,7 +57,7 @@ Public Class ClsPolBenefit
     End Property
 #End Region
 
-    Public Function bindData(POLICYNO As String) As DataTable
+    Public Function bindData(POLICYNO As String, MAPPING As String) As DataTable
         Try
             Using con As New SqlConnection(config.MSSQLConnection)
                 Dim cmd As New SqlCommand
@@ -66,13 +66,45 @@ Public Class ClsPolBenefit
                 cmd.Connection = con
                 Dim kode As String = ""
                 Dim txtsql As String
-                txtsql = " SP_REL_POL_BENEFIT '" & POLICYNO & "' "
+                txtsql = " SP_REL_POL_BENEFIT '" & POLICYNO & "','" & MAPPING & "' "
 
                 Try
                     cmd.CommandText = txtsql
 
                     Dim da As New SqlDataAdapter(cmd)
                     Dim dt As New DataTable
+                    da.Fill(dt)
+                    Return dt
+                Catch ex As Exception
+                    Return Nothing
+                Finally
+                    con.Close()
+                End Try
+
+            End Using
+        Catch ex As Exception
+            Throw New Exception(ex.Message)
+        End Try
+    End Function
+
+    Public Function PolBenefitMapping(POLICYNO As String, Optional MEMBID As String = "") As DataTable
+        Try
+            If MEMBID = "" Then
+                MEMBID = "%"
+            End If
+
+            Using con As New SqlConnection(config.MSSQLConnection)
+                Dim cmd As New SqlCommand
+                Dim dt As New DataTable
+                cmd.CommandType = CommandType.StoredProcedure
+                cmd.CommandTimeout = config.SQLtimeout
+                cmd.Connection = con
+                cmd.CommandText = "SP_POL_BENEFIT_LIST_MAPPING"
+                cmd.Parameters.Add(New SqlParameter("@POLICYNO", SqlDbType.VarChar) With {.Value = POLICYNO})
+                cmd.Parameters.Add(New SqlParameter("@MEMBID", SqlDbType.VarChar) With {.Value = MEMBID})
+
+                Try
+                    Dim da As New SqlDataAdapter(cmd)
                     da.Fill(dt)
                     Return dt
                 Catch ex As Exception

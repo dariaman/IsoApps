@@ -9,8 +9,8 @@
                         <div class="form-group input-group">
                             <span class="input-group-addon">Cari dengan </span>
                             <asp:DropDownList ID="ddlSearch" runat="server" class="form-control tip-bottom" placeholder="Cari dengan" name="Cari dengan" type="Cari dengan"   >
-                                <asp:ListItem>Id Pengguna</asp:ListItem>
-                                <asp:ListItem Value="User Name">Nama Pengguna</asp:ListItem>
+                                <asp:ListItem Value="id">Id Pengguna</asp:ListItem>
+                                <asp:ListItem Value="nama">Nama Pengguna</asp:ListItem>
                             </asp:DropDownList>
 
                         </div>
@@ -82,34 +82,20 @@
                         <div class="row">
                             <div class="col-sm-12">
                                 <div class="panel panel-default">
-                                    <div class="panel-heading">
-                                        Sandi Saat ini
-                                    </div>
                                     <div class="table-responsive">
                                         <table class="table table-bordered table-striped">
-                                            <tr>
-                                                <td>Id Pengguna
-                                                </td>
-                                                <td>
-                                                    <asp:Label ID="lblUserId" runat="server"></asp:Label>
-                                                </td>
+                                            <tr><td>Id Pengguna</td>
+                                                <td><asp:Label ID="lblUserId" runat="server"></asp:Label></td>
                                             </tr>
                                             <tr>
-                                                <td>Nama Pengguna
-                                                </td>
-                                                <td>
-                                                    <asp:Label ID="lblUsername" runat="server"></asp:Label>
-                                                </td>
+                                                <td>Nama Pengguna</td>
+                                                <td><asp:Label ID="lblUsername" runat="server"></asp:Label></td>
                                             </tr>
                                             <tr>
-                                                <td>Sandi
-                                                </td>
-                                                <td>
-                                                    <asp:Label ID="lblPassword" runat="server"></asp:Label>
-                                                </td>
+                                                <td>Sandi</td>
+                                                <td><asp:Label ID="lblPassword" runat="server"></asp:Label></td>
                                             </tr>
                                         </table>
-
                                         <div class="col-sm-2">
                                             <asp:Button ID="btnReset" CssClass="btn btn-primary btn-block btn-flat" runat="server" Text="Reset" Visible="False" />
                                         </div>

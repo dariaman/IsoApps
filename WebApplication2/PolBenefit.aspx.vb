@@ -30,6 +30,7 @@ Public Class PolBenefit
                                 Response.Redirect("Home.aspx", False)
                             End If
                             ddlSearch.SelectedIndex = 0
+                            btnSave.Enabled = False
                         Catch ex As Exception
 
                         End Try
@@ -49,25 +50,33 @@ Public Class PolBenefit
 
     Protected Sub bindData(policyno As String)
         Try
-            gridMenu.DataSource = _ClsPolBenefit.bindData(policyno)
+            gridMenu.DataSource = _ClsPolBenefit.bindData(policyno, IIf(ddlSearch.SelectedValue = "Select", "", ddlSearch.SelectedValue))
             gridMenu.DataBind()
         Catch ex As Exception
             Throw New Exception(ex.Message)
         End Try
     End Sub
 
-    Private Sub GvDischarge_RowCommand(sender As Object, e As GridViewCommandEventArgs) Handles gridMenu.RowCommand
+    Private Sub gridMenu_RowCommand(sender As Object, e As GridViewCommandEventArgs) Handles gridMenu.RowCommand
         System.Threading.Thread.Sleep(500)
         If e.CommandName.Equals("SelectProcess") Then
 
         End If
     End Sub
 
-
     Protected Sub btnSearch1_Click(sender As Object, e As EventArgs) Handles btnSearch1.Click
         Try
             System.Threading.Thread.Sleep(500)
             bindData(_tb_search.Text)
+            If ddlSearch.SelectedValue = "Select" Then
+                btnSave.Enabled = False
+            Else
+                If gridMenu.Rows.Count <= 0 Then
+                    btnSave.Enabled = False
+                Else
+                    btnSave.Enabled = True
+                End If
+            End If
         Catch ex As Exception
             ClientScript.RegisterStartupScript(Me.GetType, "confirm", "<script language=javascript>jqxAlert.Alert('Error!, " & ex.Message.ToString & vbCrLf & Environment.NewLine & "');</script>")
             Dim msg As String = String.Format("{0} - TransactionList - " & UserLogin.UserId & " - {1} - {2}{3}", Now.ToString("dd/MM/yyyy HH:mm:ss"), UserLogin.UserId, ex, Environment.NewLine)
@@ -88,7 +97,7 @@ Public Class PolBenefit
             ClientScript.RegisterStartupScript(Me.GetType, "confirm", "<script language=javascript>jqxAlert.Information('Policy No dont have value');</script>")
             Exit Sub
         End If
-        Dim dt As DataTable = _ClsPolBenefit.bindData(_tb_search.Text)
+        Dim dt As DataTable = _ClsPolBenefit.bindData(_tb_search.Text, IIf(ddlSearch.SelectedValue = "Select", "", ddlSearch.SelectedValue))
         If dt.Rows.Count <= 0 Then
             ClientScript.RegisterStartupScript(Me.GetType, "confirm", "<script language=javascript>jqxAlert.Information('Check again Policy No');</script>")
             Exit Sub
@@ -118,5 +127,14 @@ Public Class PolBenefit
     Protected Sub ddlSearch_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ddlSearch.SelectedIndexChanged
         System.Threading.Thread.Sleep(500)
         bindData(_tb_search.Text)
+        If ddlSearch.SelectedValue = "Select" Then
+            btnSave.Enabled = False
+        Else
+            If gridMenu.Rows.Count <= 0 Then
+                btnSave.Enabled = False
+            Else
+                btnSave.Enabled = True
+            End If
+        End If
     End Sub
 End Class

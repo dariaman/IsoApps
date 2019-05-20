@@ -490,6 +490,8 @@ Public Class Discharge
             Dim trxId = Request.QueryString("trx").ToString()
             Dim dt As DataTable
             Dim eligibleamt As Decimal
+            Dim incurredamt As Decimal
+            Dim totalincurredamt As Decimal
             Dim providerId As String = UserLogin.providerid
             Dim subProdId As String = _ddl_coverage.SelectedValue
 
@@ -512,9 +514,21 @@ Public Class Discharge
                 Dim _tb_remarks As TextBox = DirectCast(_rpt_item.Items(i).FindControl("_tb_remarks"), TextBox)
 
                 eligibleamt = CDec(_lbl_eligible_amount.Text)
+                incurredamt = CDec(_tb_incurred_amount.Text)
+                totalincurredamt += incurredamt
 
-                dt = _ClsDischarge.tmpTransactionBenefitCalculateInsert(trxId, _hf_subprod_id.Value, _hf_benefit_id.Value, _hf_sublimit.Value, _hf_subgroup.Value, _hf_limitamtid.Value, _tb_lenght_of_stay.Text, _hf_benlimamt.Value, eligibleamt, _tb_incurred_amount.Text, _hf_cardno.Value, _hf_policyno.Value, _tb_remarks.Text.Trim())
+                If (incurredamt > 0) Then
+                    dt = _ClsDischarge.tmpTransactionBenefitCalculateInsert(trxId, _hf_subprod_id.Value, _hf_benefit_id.Value, _hf_sublimit.Value, _hf_subgroup.Value, _hf_limitamtid.Value, _tb_lenght_of_stay.Text, _hf_benlimamt.Value, eligibleamt, _tb_incurred_amount.Text, _hf_cardno.Value, _hf_policyno.Value, _tb_remarks.Text.Trim())
+                End If
+
             Next
+
+            'jika total incurred amount = nol, user belum input incurred amount sama sekali
+            If (totalincurredamt = 0) Then
+                ClientScript.RegisterStartupScript(Me.GetType, "confirm", "<script language=javascript>jqxAlert.Information('Jumlah Tagihan tidak boleh kosong.');</script>")
+                Exit Sub
+            End If
+
             'start proses calculate
             dt = _ClsDischarge.tmpTransactionBenefitCalculateProcess(trxId)
             'end proses calculate
@@ -814,5 +828,9 @@ Public Class Discharge
     Protected Sub _btn_surat_rujukan_Click(sender As Object, e As EventArgs) Handles _btn_surat_rujukan.Click
         System.Threading.Thread.Sleep(500)
         viewrpt("WebViewer.aspx", 5, _lbl_s_trxid.Text, "SURAT RUJUKAN")
+    End Sub
+
+    Private Sub _gv_discharge_RowDataBound(sender As Object, e As GridViewRowEventArgs) Handles _gv_discharge.RowDataBound
+
     End Sub
 End Class

@@ -479,9 +479,9 @@ Public Class sama
         Using con As New SqlConnection(config.MSSQLConnection)
             Dim strsql As String
             If role = "00001" Then
-                strsql = "select RoleCode,RoleDesc from msrole with (nolock) "
+                strsql = "select RoleCode,RoleDesc from msrole with (nolock) where isactive=1 "
             Else
-                strsql = "select RoleCode,RoleDesc from msrole with (nolock) where RoleCode<>'00001'"
+                strsql = "select RoleCode,RoleDesc from msrole with (nolock) where RoleCode<>'00001' where isactive=1"
             End If
 
             Dim cmd As New SqlCommand(strsql, con)

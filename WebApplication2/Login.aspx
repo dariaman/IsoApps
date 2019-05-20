@@ -42,7 +42,7 @@
                     <div class="control-group">
                     <div class="controls">
                         <div class="main_input_box">
-                            <span class="add-on"><i class="fa fa-user"></i></span><asp:TextBox ID="txtUserid" runat="server"  placeholder="Id Pengguna.." name="UserId"  data-original-title="Isi Id Pengguna.." MaxLength="50" CssClass=" tip-bottom"></asp:TextBox>
+                            <span class="add-on"><i class="fa fa-user"></i></span><asp:TextBox ID="txtUserid" runat="server"  placeholder="Id Pengguna Testing.." name="UserId"  data-original-title="Isi Id Pengguna.." MaxLength="50" CssClass=" tip-bottom"></asp:TextBox>
                     
                         </div>
                     </div>
@@ -50,7 +50,7 @@
                     <div class="control-group">
                     <div class="controls">
                         <div class="main_input_box">
-                            <span class="add-on"><i class="fa fa-lock"></i></span><asp:TextBox ID="txtPassword" runat="server"  placeholder="Sandi.." name="Sandi.." type="password"  data-original-title="Input your password" MaxLength="25" CssClass=" tip-bottom"></asp:TextBox>
+                            <span class="add-on"><i class="fa fa-lock"></i></span><asp:TextBox ID="txtPassword" runat="server"  placeholder="Sandi Testing.." name="Sandi.." type="password"  data-original-title="Input your password" MaxLength="25" CssClass=" tip-bottom"></asp:TextBox>
                     
                         </div>
                     </div>

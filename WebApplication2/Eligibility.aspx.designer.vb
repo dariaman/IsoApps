@@ -131,6 +131,15 @@ Partial Public Class Eligibility
     Protected WithEvents _lbl_header As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
+    '''_pnl_member_detail control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents _pnl_member_detail As Global.System.Web.UI.WebControls.Panel
+
+    '''<summary>
     '''gridMemberDetail control.
     '''</summary>
     '''<remarks>

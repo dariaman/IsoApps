@@ -1,7 +1,8 @@
 /WebApplication2/obj
 /WebService1/bin
 /WebService1/obj
-/WebApplication2/bin
+/WebApplication2/bin/*
+/WebApplication2/obj/*
 /WebApplication2/Web.config
 /WebApplication2/WebIsomedik.vbproj
 /WebIsomedik.v11.suo

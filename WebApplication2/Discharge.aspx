@@ -237,7 +237,7 @@
                             <div class=" form-group has-warning ">
                                 <i class='fa fa-bell-o fa-fw'> </i>Informasi Polis
                                 <%--<asp:Label ID="_Lbl_TPAREMARKS" runat="server"  class="form-control control-label" for="inputWarning" text="123"></asp:Label>--%>
-                                <asp:TextBox ID="_LblTPAREMARKS" runat="server"  class="form-control control-label" for="inputWarning" text="123" TextMode="MultiLine" ReadOnly="true"></asp:TextBox>                                
+                                <asp:TextBox ID="_LblTPAREMARKS" runat="server"  class="form-control control-label" for="inputWarning" text="123" TextMode="MultiLine" ReadOnly="true" Font-Size="Small"></asp:TextBox>                                
                             </div>
                             </asp:Panel>
                         </div>  
@@ -340,7 +340,7 @@
                                                     </td>
                                                     <td style="text-align:right;width:9%">
                                                         <div class="form-group has-success">
-                                                            <asp:TextBox ID="_tb_excess_amount" MaxLength="15" onkeypress="return isKeyNumber(event)"  runat="server" CssClass="form-control" Text='<%# DataBinder.Eval(Container.DataItem, "EXCESSAMT","{0:N}").ToString()%>' Enabled="false" Font-Size="Small"></asp:TextBox>
+                                                            <asp:TextBox ID="_tb_excess_amount" MaxLength="15" onkeypress="return isKeyNumber(event)"  runat="server" CssClass="form-control" onClick="this.select();" Text='<%# DataBinder.Eval(Container.DataItem, "EXCESSAMT","{0:N}").ToString()%>' Enabled="false" Font-Size="Small"></asp:TextBox>
                                                         </div>
                                                     </td>
                                                     <%--<td style="text-align:right;width:30%">                                                        
@@ -373,7 +373,7 @@
                                                 </asp:Panel>
                                                 <asp:Panel ID="_pnl_btn_reset" runat="server">
                                                     <div class="col-sm-2" style="text-align:center">
-                                                        <asp:Button ID="_btnReset" CssClass="btn btn-primary" runat="server" Text="Input Kembali" ValidationGroup="next" Visible="false" UseSubmitBehavior="false"/>
+                                                        <asp:Button ID="_btnReset" CssClass="btn btn-warning" runat="server" Text="Input Kembali" ValidationGroup="next" Visible="false" UseSubmitBehavior="false"/>
                                                     </div>
                                                 </asp:Panel>
                                                 <asp:Panel ID="_pnl_btn_submit" runat="server">

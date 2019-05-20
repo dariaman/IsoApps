@@ -1,4 +1,5 @@
-﻿<%@ Page Language="vb" AutoEventWireup="false" MasterPageFile="~/Site.Master" CodeBehind="PolBenefit.aspx.vb" Inherits="WebIsomedik.PolBenefit" Title="Transaction | Policy Benefit"%>
+﻿<%@ Page Language="vb" AutoEventWireup="false" MasterPageFile="~/Site.Master" CodeBehind="PolBenefit.aspx.vb" Inherits="WebIsomedik.PolBenefit" 
+    Title="Transaction | Policy Benefit"%>
 
 <%@ Register assembly="AjaxControlToolkit" namespace="AjaxControlToolkit" tagprefix="asp" %>
 
@@ -29,7 +30,7 @@
                             </asp:DropDownList>
                             </div> 
                         </div>
-                    </div>              
+                    </div>
                     </div>
                 <div class="row">
                      <asp:GridView ID="gridMenu" runat="server" AutoGenerateColumns="False" CssClass="table table-striped table-bordered table-hover"
@@ -45,6 +46,7 @@
                                             <asp:BoundField DataField="PLANID" HeaderText=" PLAN ID" HeaderStyle-Width="10%"/>
                                             <asp:BoundField DataField="SUBPRODID" HeaderText=" PRODUCT ID" HeaderStyle-Width="10%"/>
                                             <asp:BoundField DataField="SUBPRODNM2" HeaderText=" PRODUCT NAME" />
+                                            <asp:BoundField DataField="MAPPING" HeaderText=" MAPPING" HeaderStyle-Width="10%"/>
                                         </Columns>
                                     </asp:GridView>
                 </div>

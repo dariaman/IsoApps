@@ -20,7 +20,7 @@
                                                Nama Provider                                           
                                             </td>                                            
                                             <td >
-                                                <asp:TextBox ID="providerName" runat="server" onkeypress="return isKey(event)" class="form-control tip-bottom" data-original-title="provider Name" name="Nama Provider..." placeholder="Isi Nama Provider ( ketik untuk mulai pencarian nama provider )..." type="Nama Provider..." Onblur="mylenProviderFunction()" Font-Size="Small"></asp:TextBox>
+                                                <asp:TextBox ID="providerName" runat="server" onkeypress="return isKey(event)" class="form-control tip-bottom" data-original-title="provider Name" name="Nama Provider..." placeholder="Isi Nama Provider ( ketik minimal 3 huruf untuk mulai pencarian nama provider )..." type="Nama Provider..." Onblur="mylenProviderFunction()" Font-Size="Small"></asp:TextBox>
                                                                 <%--<asp:AutoCompleteExtender ID="providerName_AutoCompleteExtender" runat="server" DelimiterCharacters="" Enabled="True" ServicePath="" TargetControlID="providerName">
                                                 </asp:AutoCompleteExtender>--%>
                                                                 <asp:AutoCompleteExtender ID="providerName_AutoCompleteExtender" runat="server" DelimiterCharacters="" Enabled="True" UseContextKey="True" TargetControlID="providerName" MinimumPrefixLength="3" EnableCaching="true" ServiceMethod="AutocompleteProviderEx" CompletionInterval="100" FirstRowSelected = "false"
@@ -73,6 +73,7 @@
                                 <h3 class="box-title"> 
                                     <asp:Label ID="_lbl_header" runat="server"></asp:Label>
                                 </h3>
+                                <asp:Panel ID="_pnl_member_detail" runat="server" ScrollBars="Auto">
                                 <asp:GridView ID="gridMemberDetail" runat="server" AllowPaging="True" AutoGenerateColumns="False" CssClass="table table-striped table-bordered table-hover"
                                     EmptyDataRowStyle-CssClass="empty_data"
                                     EmptyDataText="No data Found">
@@ -120,9 +121,15 @@
                                                 <asp:HiddenField ID="_hf_free_service_flag" runat="server" Value='<%# DataBinder.Eval(Container.DataItem, "FREE_SERVICE")%>'/>
                                                 <asp:HiddenField ID="_hf_client_code" runat="server" Value='<%# DataBinder.Eval(Container.DataItem, "CLIENTCODE")%>'/>
                                             </ItemTemplate>
-                                        </asp:TemplateField>                                                                                                                          
+                                        </asp:TemplateField>
+                                        <asp:TemplateField HeaderText="No.BPJS - FKTP" HeaderStyle-Width="20%" >
+                                            <ItemTemplate>
+                                                No. BPJS :<%# DataBinder.Eval(Container.DataItem, "USERFIELD9")%><br />FTKP     :<%# DataBinder.Eval(Container.DataItem, "USERFIELD10")%>
+                                            </ItemTemplate>
+                                        </asp:TemplateField>
                                     </Columns>
                                 </asp:GridView>
+                                </asp:Panel>
                                 <asp:Panel ID="_pnl_member_benefit_vm" runat="server">
                                     <div class="box box-info">                        
                                         <div class="box-header">

@@ -639,32 +639,38 @@ Public Class ClsUser
         End Using
     End Function
 
-    Public Function SelectDataMSUserlike(type As String, userid As String, useridss As String) As DataTable
+    Public Function SelectDataMSUserlike(type As String, SearchData As String) As DataTable
         Try
 
             Using con As New SqlConnection(config.MSSQLConnection)
                 Dim cmd As New SqlCommand
+                Dim kolom As String
                 cmd.CommandType = CommandType.Text
                 cmd.CommandTimeout = config.SQLtimeout
                 cmd.Connection = con
+                'cmd.CommandText = "[dbo].[SP_S_MSUserlike] '" & type & "','" & userid & "','True','" & useridss & "'"
+                If type = "id" Then
+                    kolom = "USERID"
+                Else
+                    kolom = "USERNAME"
+                End If
+                If SearchData = "" Then
+                    cmd.CommandText = "SELECT USERID,USERNAME,PASSWORD FROM MSUSER"
+                Else
+                    cmd.CommandText = "SELECT USERID,USERNAME,PASSWORD FROM MSUSER WHERE " + kolom + " LIKE @search"
+                    cmd.Parameters.Add(New SqlParameter("@search", SqlDbType.VarChar) With {.Value = SearchData})
+                End If
 
-                cmd.CommandText = "[dbo].[SP_S_MSUserlike] '" & type & "','" & userid & "','True','" & useridss & "'"
                 Try
                     Dim da As New SqlDataAdapter(cmd)
                     Dim dt As New DataTable
                     da.Fill(dt)
-
-                    If dt.Rows.Count > 0 Then
-                        Return dt
-                    Else
-                        Return dt
-                    End If
+                    Return dt
                 Catch ex As Exception
                     Return Nothing
                 Finally
                     con.Close()
                 End Try
-
             End Using
         Catch ex As Exception
             'ClientScript.RegisterStartupScript(Me.GetType, "confirm", "<script language=javascript>alert('Error!, Please contact IT Support');</script>")

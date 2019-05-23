@@ -96,9 +96,9 @@ Public Class clsReport
                     p.DSstr1 = dr("DSstr1")
                     p.Param1 = param1
                     p.Param2 = param2
-                    p.Param3 = dr("Param3")
-                    p.Param4 = dr("Param4")
-                    p.Param5 = dr("Param5")
+                    p.Param3 = dr("Param3").ToString
+                    p.Param4 = dr("Param4").ToString
+                    p.Param5 = dr("Param5").ToString
                 End While
             Catch ex As Exception
                 Throw New Exception(ex.Message)
@@ -159,6 +159,30 @@ Public Class clsReport
         End Using
     End Sub
 
+    Public Shared Sub Rpt5Key(p As clsReport, pColl As clsReport.MSReportCollection, ByVal Key As String, ByVal Key1 As String, ByVal Key2 As String, ByVal Key3 As String, ByVal Key4 As String, ByVal Key5 As String, param1 As String, param2 As String)
+        Using con As New SqlConnection(config.MSSQLConnection)
+            Dim cmd As New SqlCommand("SELECT * from MSReport where [no] =" & Key, con)
+            Try
+                con.Open()
+                Dim dr As SqlDataReader = cmd.ExecuteReader()
+                While dr.Read()
+                    p.ReportPath = dr("ReportPath")
+                    p.RptSql1 = dr("RptSql1") & " '" & Key1 & "', '" & Key2 & "', '" & Key3 & "', '" & Key4 & "', '" & Key5 & "'"
+                    p.DSstr1 = dr("DSstr1")
+                    p.Param1 = param1
+                    p.Param2 = param2
+                    p.Param3 = dr("Param3").ToString
+                    p.Param4 = dr("Param4").ToString
+                    p.Param5 = dr("Param5").ToString
+                End While
+            Catch ex As Exception
+                Throw New Exception(ex.Message)
+            Finally
+                con.Close()
+            End Try
+            pColl.Add(p)
+        End Using
+    End Sub
 #Region "property"
     Public _ReportPath As String, _RptSql1 As String, _DSstr1 As String, _RptSql2 As String, _DSstr2 As String, _Param1 As String, _Param2 As String, _Param3 As String, _Param4 As String, _Param5 As String
     Public _RptPin As String
@@ -299,6 +323,7 @@ Public Class clsReport
                 Dim reportDS As ReportDataSource = New ReportDataSource(DsName, DSUtama.Tables(0))
                 .ReportEmbeddedResource = ReportPath
                 RV.ProcessingMode = ProcessingMode.Local
+                RV.ShowExportControls = True
                 .DataSources.Clear()
                 .DataSources.Add(reportDS)
                 .DisplayName = "Report : " & DsName
@@ -317,11 +342,7 @@ Public Class clsReport
                 .SetParameters(Param3)
                 .SetParameters(Param4)
                 .SetParameters(Param5)
-                '.Refresh()
             End With
-            'Dim RV1 As ReportViewer
-            'RV1 = RV
-            'Return RV1
         End Sub
         Public Sub viewrpt2(RV As ReportViewer, ReportPath As String, RptSql As String, RptSql2 As String, DsName As String, DsName2 As String, prm1 As String, prm2 As String, prm3 As String, prm4 As String, prm5 As String)
             Dim DSUtama As DataSet

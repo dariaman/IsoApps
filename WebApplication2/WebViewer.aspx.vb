@@ -27,40 +27,21 @@ Public Class WebViewer
             If Not Page.IsPostBack Then
                 If UserLogin.IsActive Then
                     Try
-                        'Session("DashBoard") = "PREVIEW <i class='fa fa-star fa-fw'></i>"
                         Dim p As New clsReport
                         Dim pColl As New clsReport.MSReportCollection
-                        'If Session("No") = "4" Or Session("No") = "5" Or Session("No") = "6" Or Session("No") = "7" _
-                        '    Or Session("No") = "9" Or Session("No") = "10" Or Session("No") = "11" Or Session("No") = "12" Or Session("No") = "13" Or Session("No") = "14" _
-                        '    Or Session("No") = "17" Or Session("No") = "18" Or Session("No") = "19" Or Session("No") = "20" Or Session("No") = "21" Or Session("No") = "22" Or Session("No") = "23" _
-                        '    Or Session("No") = "25" Or Session("No") = "27" Or Session("No") = "28" Or Session("No") = "32" Or Session("No") = "33" Or Session("No") = "34" Or Session("No") = "35" _
-                        '    Or Session("No") = "36" Or Session("No") = "37" Or Session("No") = "38" Or Session("No") = "39" Or Session("No") = "40" Or Session("No") = "41" Or Session("No") = "42" Or Session("No") = "43" Then
-                        '    clsReport.Rpt1Key(p, pColl, Session("No"), Session("PIN"), Session("Param1"), Session("Param2"))
-                        '    pColl.viewrpt(ReportViewer1, p.ReportPath, p.RptSql1, p.DSstr1, p.Param1, p.Param2, p.Param3, p.Param4, p.Param5)
-                        '    Session("No_Reg") = ""
-                        'End If
-                        'If Session("No") = "2" Or Session("No") = "3" Or Session("No") = "30" Or Session("No") = "31" Then
-                        '    clsReport.Rpt12Key(p, pColl, Session("No"), Session("kd_store"), Session("ACA_INVOICE_NO"), Session("Param1"), Session("Param2"))
-                        '    pColl.viewrpt(ReportViewer1, p.ReportPath, p.RptSql1, p.DSstr1, p.Param1, p.Param2, p.Param3, p.Param4, p.Param5)
-                        'End If
-                        'If Session("No") = "8" Or Session("No") = "29" Then
-                        '    clsReport.Rpt17Key(p, pColl, Session("No"), Session("Key1"), Session("Key2"), Session("Key3"), Session("Key4"), Session("Key5"), Session("Key6"), Session("Key7"), Session("Param1"), Session("Param2"), Session("Key8"), Session("Key9"))
-                        '    pColl.viewrpt(ReportViewer1, p.ReportPath, p.RptSql1, p.DSstr1, p.Param1, p.Param2, p.Param3, p.Param4, p.Param5)
-                        'End If
-                        'If Session("No") = "15" Then
-                        '    clsReport.Rpt12Key(p, pColl, Session("No"), Session("NO_POLIS"), Session("PIN"), Session("Param1"), Session("Param2"))
-                        '    pColl.viewrpt(ReportViewer1, p.ReportPath, p.RptSql1, p.DSstr1, p.Param1, p.Param2, p.Param3, p.Param4, p.Param5)
-                        'End If
-                        'If Session("No") = "16" Then
-                        '    clsReport.Rpt16Key(p, pColl, Session("No"), Session("Key1"), Session("Key2"), Session("Key3"), Session("Key4"), Session("Key5"), Session("Key6"), Session("Param1"), Session("Param2"), Session("Param3"), Session("Key8"))
-                        '    pColl.viewrpt(ReportViewer1, p.ReportPath, p.RptSql1, p.DSstr1, p.Param1, p.Param2, p.Param3, p.Param4, p.Param5)
-                        'End If
+                       
+
                         If Session("No") = "1" Or Session("No") = "2" Or Session("No") = "3" Or Session("No") = "4" Or Session("No") = "5" Or Session("No") = "6" Then
                             clsReport.Rpt1Key(p, pColl, Session("No"), Session("key1"), Session("Param1"), Session("Param2"))
                             pColl.viewrpt(ReportViewer1, p.ReportPath, p.RptSql1, p.DSstr1, p.Param1, p.Param2, p.Param3, p.Param4, p.Param5)
                         End If
+
+                        If Session("No") = "7" Then
+                            clsReport.Rpt5Key(p, pColl, Session("No"), Session("key1"), Session("key2"), Session("key3"), Session("key4"), Session("key5"), Session("Param1"), Session("Param2"))
+                            pColl.viewrpt(ReportViewer1, p.ReportPath, p.RptSql1, p.DSstr1, p.Param1, p.Param2, p.Param3, p.Param4, p.Param5)
+                        End If
                         
-                        ReportViewer1.ShowExportControls = False
+                        ReportViewer1.ShowExportControls = True
                         Session("No") = ""
                         clsReport.Bytes = pColl.exporttofile(ReportViewer1, "Pdf")
 

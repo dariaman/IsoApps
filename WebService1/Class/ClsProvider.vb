@@ -369,7 +369,83 @@ Public Class ClsProvider
 
 #End Region
 
+    Public Sub DDLlistProvider(ByVal Nameddl As DropDownList)
+        Using con As New SqlConnection(config.MSSQLConnection)
+            Dim cmd As New SqlCommand("SELECT PROVIDERID,PROVIDERNAME FROM dbo.MSPROVIDERMASTER WHERE ISACTIVE=1 ORDER BY PROVIDERNAME;", con)
+            Try
+                con.Open()
+                Dim dr As SqlDataReader = cmd.ExecuteReader()
+                Nameddl.Items.Clear()
+                Dim xxn As New ListItem
+                xxn.Text = "ALL"
+                xxn.Value = " "
+                Nameddl.Items.Add(xxn)
 
+                While dr.Read()
+                    Dim n As New ListItem
+                    n.Text = dr(1).ToString()
+                    n.Value = dr(0).ToString()
+                    Nameddl.Items.Add(n)
+                End While
+            Catch ex As Exception
+                Throw New Exception(ex.Message)
+            Finally
+                con.Close()
+            End Try
+        End Using
+    End Sub
+
+    Public Sub DDLlistClient(ByVal Nameddl As DropDownList)
+        Using con As New SqlConnection(config.MSSQLConnection)
+            Dim cmd As New SqlCommand("SELECT CLIENTCODE,CLIENTNAME FROM rel.dbo.POL_HOLDER_MASTER ORDER BY CLIENTNAME;", con)
+            Try
+                con.Open()
+                Dim dr As SqlDataReader = cmd.ExecuteReader()
+                Nameddl.Items.Clear()
+                Dim xxn As New ListItem
+                xxn.Text = "ALL"
+                xxn.Value = " "
+                Nameddl.Items.Add(xxn)
+
+                While dr.Read()
+                    Dim n As New ListItem
+                    n.Value = dr(0).ToString()
+                    n.Text = dr(1).ToString()
+                    Nameddl.Items.Add(n)
+                End While
+            Catch ex As Exception
+                Throw New Exception(ex.Message)
+            Finally
+                con.Close()
+            End Try
+        End Using
+    End Sub
+
+    Public Sub DDLlistStatus(ByVal Nameddl As DropDownList)
+        Using con As New SqlConnection(config.MSSQLConnection)
+            Dim cmd As New SqlCommand("SELECT STATUS,STATUSNM FROM dbo.MSSTATUS ;", con)
+            Try
+                con.Open()
+                Dim dr As SqlDataReader = cmd.ExecuteReader()
+                Nameddl.Items.Clear()
+                Dim xxn As New ListItem
+                xxn.Text = "ALL"
+                xxn.Value = " "
+                Nameddl.Items.Add(xxn)
+
+                While dr.Read()
+                    Dim n As New ListItem
+                    n.Value = dr(0).ToString()
+                    n.Text = dr(1).ToString()
+                    Nameddl.Items.Add(n)
+                End While
+            Catch ex As Exception
+                Throw New Exception(ex.Message)
+            Finally
+                con.Close()
+            End Try
+        End Using
+    End Sub
 
     Public Function bindData1(PROVIDERID As String, PROVIDERTYPE As String, SEARCH As String) As DataTable
         Try

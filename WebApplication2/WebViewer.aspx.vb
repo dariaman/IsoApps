@@ -29,19 +29,19 @@ Public Class WebViewer
                     Try
                         Dim p As New clsReport
                         Dim pColl As New clsReport.MSReportCollection
-                       
 
                         If Session("No") = "1" Or Session("No") = "2" Or Session("No") = "3" Or Session("No") = "4" Or Session("No") = "5" Or Session("No") = "6" Then
                             clsReport.Rpt1Key(p, pColl, Session("No"), Session("key1"), Session("Param1"), Session("Param2"))
                             pColl.viewrpt(ReportViewer1, p.ReportPath, p.RptSql1, p.DSstr1, p.Param1, p.Param2, p.Param3, p.Param4, p.Param5)
-                        End If
-
-                        If Session("No") = "7" Then
+                        ElseIf Session("No") = "7" Then
                             clsReport.Rpt5Key(p, pColl, Session("No"), Session("key1"), Session("key2"), Session("key3"), Session("key4"), Session("key5"), Session("Param1"), Session("Param2"))
                             pColl.viewrpt(ReportViewer1, p.ReportPath, p.RptSql1, p.DSstr1, p.Param1, p.Param2, p.Param3, p.Param4, p.Param5)
+                        ElseIf Session("No") = "8" Then
+                            clsReport.Rpt3Key(p, pColl, Session("No"), Session("key1"), Session("key2"), Session("key3"), Session("Param1"), Session("Param2"))
+                            pColl.viewrpt(ReportViewer1, p.ReportPath, p.RptSql1, p.DSstr1, p.Param1, p.Param2, p.Param3, p.Param4, p.Param5)
                         End If
-                        
-                        ReportViewer1.ShowExportControls = True
+
+                        ReportViewer1.ShowExportControls = False
                         Session("No") = ""
                         clsReport.Bytes = pColl.exporttofile(ReportViewer1, "Pdf")
 

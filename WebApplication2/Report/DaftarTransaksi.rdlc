@@ -18,6 +18,9 @@
               <Width>3.24602cm</Width>
             </TablixColumn>
             <TablixColumn>
+              <Width>3.63771cm</Width>
+            </TablixColumn>
+            <TablixColumn>
               <Width>4.20875cm</Width>
             </TablixColumn>
             <TablixColumn>
@@ -181,6 +184,41 @@
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox5</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <BackgroundColor>LightGrey</BackgroundColor>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox2">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>ADMISSION DATE</Value>
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox2</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -707,6 +745,38 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
+                    <Textbox Name="ADMISSIONDT">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!ADMISSIONDT.Value</Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>ADMISSIONDT</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
                     <Textbox Name="POLICYNO">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
@@ -1064,6 +1134,7 @@
             <TablixMember />
             <TablixMember />
             <TablixMember />
+            <TablixMember />
           </TablixMembers>
         </TablixColumnHierarchy>
         <TablixRowHierarchy>
@@ -1080,7 +1151,7 @@
         <Top>2.37808cm</Top>
         <Left>0.49953cm</Left>
         <Height>1.2cm</Height>
-        <Width>63.89562cm</Width>
+        <Width>67.53331cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -1255,7 +1326,7 @@
     <Height>2.91667in</Height>
     <Style />
   </Body>
-  <Width>25.62023in</Width>
+  <Width>26.78458in</Width>
   <Page>
     <PageHeight>29.7cm</PageHeight>
     <PageWidth>21cm</PageWidth>
@@ -1293,6 +1364,10 @@
         </Field>
         <Field Name="TRANSACTIONID">
           <DataField>TRANSACTIONID</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ADMISSIONDT">
+          <DataField>ADMISSIONDT</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="POLICYNO">
@@ -1341,8 +1416,8 @@
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>PROAPPSDataSet</rd:DataSetName>
-        <rd:SchemaPath>D:\Proj\WebApplication2 - Isomedik\WebApplication2\PROAPPSDataSet.xsd</rd:SchemaPath>
+        <rd:DataSetName>DS_TRANSAKSI_CLAIM</rd:DataSetName>
+        <rd:SchemaPath>D:\Proj\WebApplication2 - Isomedik\WebApplication2\Report\DS_TRANSAKSI_CLAIM.xsd</rd:SchemaPath>
         <rd:TableName>USP_RPT_TRANSAKSI_CLAIM</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>

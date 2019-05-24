@@ -1,4 +1,5 @@
-﻿<%@ Page title="File | Setting | BioData List" Language="vb" AutoEventWireup="false" MasterPageFile="~/Site.Master" CodeBehind="BioData.aspx.vb" Inherits="WebIsomedik.BioData" %>
+﻿<%@ Page title="File | Setting | BioData List" Language="vb" AutoEventWireup="false" MasterPageFile="~/Site.Master" 
+    CodeBehind="BioData.aspx.vb" Inherits="WebIsomedik.BioData" %>
 
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="FrameContent" runat="server">
@@ -25,7 +26,6 @@
                                 <asp:LinkButton ID="btnSearch1" CssClass="btn btn-primary btn-block btn-flat tip-bottom" runat="server" data-original-title="Search Data"><i class="fa fa-search"></i></asp:LinkButton></span>
                         </div>
                     </div>
-
                 </div>
                 <div class="col-sm-2">
                     <div class="panel-body">
@@ -36,7 +36,6 @@
                         </div>
                     </div>
                 </div>
-
             </div>
             <div id="DivBody">
             <div class="row">
@@ -46,7 +45,6 @@
                         <div class="box-header">
                             <h3 class="box-title">BioData <small>List</small></h3>
                         </div>
-
                             <div class="panel-body">
                                 <div class="dataTable_wrapper">
                                     <br />
@@ -97,8 +95,6 @@
             </div>
     </div>
         </asp:Panel>
-        
-        
     <asp:Panel ID="pnlPopup" runat="server"  DefaultButton="btnSave" Visible="false">
         <div id="DivBody1">
             <table class="table table-striped table-bordered table-hover" id="mGridPict">

@@ -2,9 +2,7 @@
     Title="List | Policy Benefit" %>
 <%@ Register assembly="AjaxControlToolkit" namespace="AjaxControlToolkit" tagprefix="asp" %>
 
-
 <asp:Content ID="Content1" ContentPlaceHolderID="FrameContent" runat="server">
-    
         <asp:Panel ID="PnlMain" runat="server" Style="background: transparent;"  DefaultButton="btnSearch1">
             <div id="DivBody">
                     <div class="row">                   

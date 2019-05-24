@@ -19,7 +19,7 @@
         Dim client As String = ddlClient.SelectedValue
         Dim status As String = ddlStatus.SelectedValue
 
-        viewrpt("WebViewer.aspx", "7", dateFrom, dateTo, provider, client, status, dateFrom, dateTo, "Daftar Transaksi")
+        viewrpt("WebViewerData.aspx", "7", dateFrom, dateTo, provider, client, status, dateFrom, dateTo, "Daftar Transaksi")
     End Sub
 
     Sub viewrpt(strform As String, No As String, key1 As String, key2 As String, key3 As String, key4 As String, key5 As String, Param1 As String, Param2 As String, judul As String) ', key2 As String, key3 As String, key4 As String)

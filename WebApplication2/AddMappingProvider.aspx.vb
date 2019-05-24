@@ -57,6 +57,7 @@ Public Class AddMappingProvider
         Dim dt As New DataTable
 
         cmd.Connection = con
+        cmd.CommandType = CommandType.Text
         cmd.CommandType = CommandType.StoredProcedure
         cmd.CommandText = "SP_PROVIDER_EKSTERNAL_LIST"
         Try

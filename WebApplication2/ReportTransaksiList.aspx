@@ -1,6 +1,6 @@
-﻿<%@ Page Language="vb" AutoEventWireup="false" MasterPageFile="~/Site.Master" 
-    CodeBehind="ReportTransaksiList.aspx.vb" Inherits="WebIsomedik.ReportTransaksiList"
-    Title="Report | Transaksi" %>
+﻿<%@ Page Language="vb" AutoEventWireup="false" MasterPageFile="~/Site.Master" Title="Report | Transaksi"
+    CodeBehind="ReportTransaksiList.aspx.vb" Inherits="WebIsomedik.ReportTransaksiList" %>
+
 <%@ Register assembly="AjaxControlToolkit" namespace="AjaxControlToolkit" tagprefix="asp" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="FrameContent" runat="server">
@@ -16,7 +16,7 @@
                             </div> 
                             <div class="form-group input-group">
                                 <div class="form-group input-group" id="datepicker1">
-                                    <span class="input-group-addon calender-btn">Admission Date From <i class="fa fa-calendar fa-fw"></i></span>
+                                    <span class="input-group-addon calender-btn">Admission Date To <i class="fa fa-calendar fa-fw"></i></span>
                                     <asp:TextBox ID="txtTo" runat="server" class="form-control tip-bottom " placeholder="Admission Date To .." ></asp:TextBox>
                                 </div>
                             </div>

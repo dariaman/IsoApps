@@ -57,9 +57,11 @@
                 <%--<asp:BoundField HeaderText="STREET2" DataField="STREET2" ItemStyle-Font-Size="Small" />--%>
                 <asp:BoundField HeaderText="ZIPCODE" DataField="ZIPCODE" ItemStyle-Font-Size="Small" />
                 <asp:BoundField HeaderText="PHONE1" DataField="PHONE1" ItemStyle-Font-Size="Small" />
-                <%--<asp:BoundField HeaderText="PHONE2" DataField="PHONE2" ItemStyle-Font-Size="Small" />--%>
                 <asp:BoundField HeaderText="FAX1" DataField="FAX1" ItemStyle-Font-Size="Small" />
-                <%--<asp:BoundField HeaderText="FAX2" DataField="FAX2" ItemStyle-Font-Size="Small" />--%>
+
+                <asp:BoundField HeaderText="LONGITUDE" DataField="LONGITUDE" ItemStyle-Font-Size="Small" />
+                <asp:BoundField HeaderText="LATITUDE" DataField="LATITUDE" ItemStyle-Font-Size="Small" />
+
                 <asp:BoundField HeaderText="EMAIL" DataField="EMAIL" HeaderStyle-Width="50px" ItemStyle-Font-Size="Small" />
                 <asp:TemplateField HeaderText="Status" ItemStyle-ForeColor="#0000FF" ItemStyle-HorizontalAlign="Left">
                     <ItemTemplate>

@@ -56,6 +56,7 @@
                                                     <asp:BoundField HeaderText="TIPE LAYANAN" DataField="SERVICENM" HeaderStyle-Width="8%"  ItemStyle-Font-Size="Small" />                                                    
                                                     <asp:BoundField HeaderText="TGL.REGISTRASI" DataField="ADMISSIONDT" HeaderStyle-Width="10%"  ItemStyle-Font-Size="Small" />
                                                     <asp:BoundField HeaderText="STATUS" DataField="STATUSNM" HeaderStyle-Width="3%"  ItemStyle-Font-Size="Small" ItemStyle-ForeColor="Red" />
+                                                    <asp:BoundField HeaderText="REMARKS" DataField="remarks" HeaderStyle-Width="3%"  ItemStyle-Font-Size="Small" />
                                                 
                                                     <asp:TemplateField HeaderText="" ItemStyle-ForeColor="#0000FF" ItemStyle-HorizontalAlign="Left" >
                                                         <ItemTemplate> 

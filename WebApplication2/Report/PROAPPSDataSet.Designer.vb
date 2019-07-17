@@ -289,11 +289,13 @@ Partial Public Class PROAPPSDataSet
         
         Private columnTRANSACTIONID As Global.System.Data.DataColumn
         
+        Private columnADMISSIONDT As Global.System.Data.DataColumn
+        
         Private columnPOLICYNO As Global.System.Data.DataColumn
         
         Private columnCLIENTNAME As Global.System.Data.DataColumn
         
-        Private columnMEMBID As Global.System.Data.DataColumn
+        Private columnCARDNO As Global.System.Data.DataColumn
         
         Private columnMEMBERNM As Global.System.Data.DataColumn
         
@@ -372,6 +374,14 @@ Partial Public Class PROAPPSDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property ADMISSIONDTColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnADMISSIONDT
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public ReadOnly Property POLICYNOColumn() As Global.System.Data.DataColumn
             Get
                 Return Me.columnPOLICYNO
@@ -388,9 +398,9 @@ Partial Public Class PROAPPSDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property MEMBIDColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property CARDNOColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnMEMBID
+                Return Me.columnCARDNO
             End Get
         End Property
         
@@ -495,9 +505,9 @@ Partial Public Class PROAPPSDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Overloads Function AddUSP_RPT_TRANSAKSI_CLAIMRow(ByVal PROVIDERID As Long, ByVal PROVIDERNAME As String, ByVal TRANSACTIONID As String, ByVal POLICYNO As String, ByVal CLIENTNAME As String, ByVal MEMBID As String, ByVal MEMBERNM As String, ByVal DIAGCODE As String, ByVal SUBPRODID As String, ByVal BILLEDAMT As Decimal, ByVal ACCEPTAMT As Decimal, ByVal EXCESSAMT As Decimal, ByVal STATUSNM As String, ByVal USERNAME As String) As USP_RPT_TRANSAKSI_CLAIMRow
+        Public Overloads Function AddUSP_RPT_TRANSAKSI_CLAIMRow(ByVal PROVIDERID As Long, ByVal PROVIDERNAME As String, ByVal TRANSACTIONID As String, ByVal ADMISSIONDT As String, ByVal POLICYNO As String, ByVal CLIENTNAME As String, ByVal CARDNO As String, ByVal MEMBERNM As String, ByVal DIAGCODE As String, ByVal SUBPRODID As String, ByVal BILLEDAMT As Decimal, ByVal ACCEPTAMT As Decimal, ByVal EXCESSAMT As Decimal, ByVal STATUSNM As String, ByVal USERNAME As String) As USP_RPT_TRANSAKSI_CLAIMRow
             Dim rowUSP_RPT_TRANSAKSI_CLAIMRow As USP_RPT_TRANSAKSI_CLAIMRow = CType(Me.NewRow,USP_RPT_TRANSAKSI_CLAIMRow)
-            Dim columnValuesArray() As Object = New Object() {PROVIDERID, PROVIDERNAME, TRANSACTIONID, POLICYNO, CLIENTNAME, MEMBID, MEMBERNM, DIAGCODE, SUBPRODID, BILLEDAMT, ACCEPTAMT, EXCESSAMT, STATUSNM, USERNAME}
+            Dim columnValuesArray() As Object = New Object() {PROVIDERID, PROVIDERNAME, TRANSACTIONID, ADMISSIONDT, POLICYNO, CLIENTNAME, CARDNO, MEMBERNM, DIAGCODE, SUBPRODID, BILLEDAMT, ACCEPTAMT, EXCESSAMT, STATUSNM, USERNAME}
             rowUSP_RPT_TRANSAKSI_CLAIMRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowUSP_RPT_TRANSAKSI_CLAIMRow)
             Return rowUSP_RPT_TRANSAKSI_CLAIMRow
@@ -523,9 +533,10 @@ Partial Public Class PROAPPSDataSet
             Me.columnPROVIDERID = MyBase.Columns("PROVIDERID")
             Me.columnPROVIDERNAME = MyBase.Columns("PROVIDERNAME")
             Me.columnTRANSACTIONID = MyBase.Columns("TRANSACTIONID")
+            Me.columnADMISSIONDT = MyBase.Columns("ADMISSIONDT")
             Me.columnPOLICYNO = MyBase.Columns("POLICYNO")
             Me.columnCLIENTNAME = MyBase.Columns("CLIENTNAME")
-            Me.columnMEMBID = MyBase.Columns("MEMBID")
+            Me.columnCARDNO = MyBase.Columns("CARDNO")
             Me.columnMEMBERNM = MyBase.Columns("MEMBERNM")
             Me.columnDIAGCODE = MyBase.Columns("DIAGCODE")
             Me.columnSUBPRODID = MyBase.Columns("SUBPRODID")
@@ -545,12 +556,14 @@ Partial Public Class PROAPPSDataSet
             MyBase.Columns.Add(Me.columnPROVIDERNAME)
             Me.columnTRANSACTIONID = New Global.System.Data.DataColumn("TRANSACTIONID", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnTRANSACTIONID)
+            Me.columnADMISSIONDT = New Global.System.Data.DataColumn("ADMISSIONDT", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnADMISSIONDT)
             Me.columnPOLICYNO = New Global.System.Data.DataColumn("POLICYNO", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnPOLICYNO)
             Me.columnCLIENTNAME = New Global.System.Data.DataColumn("CLIENTNAME", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnCLIENTNAME)
-            Me.columnMEMBID = New Global.System.Data.DataColumn("MEMBID", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnMEMBID)
+            Me.columnCARDNO = New Global.System.Data.DataColumn("CARDNO", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnCARDNO)
             Me.columnMEMBERNM = New Global.System.Data.DataColumn("MEMBERNM", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnMEMBERNM)
             Me.columnDIAGCODE = New Global.System.Data.DataColumn("DIAGCODE", GetType(String), Nothing, Global.System.Data.MappingType.Element)
@@ -570,15 +583,20 @@ Partial Public Class PROAPPSDataSet
             Me.columnPROVIDERNAME.MaxLength = 150
             Me.columnTRANSACTIONID.AllowDBNull = false
             Me.columnTRANSACTIONID.MaxLength = 50
+            Me.columnADMISSIONDT.ReadOnly = true
+            Me.columnADMISSIONDT.MaxLength = 30
             Me.columnPOLICYNO.AllowDBNull = false
             Me.columnPOLICYNO.MaxLength = 30
             Me.columnCLIENTNAME.MaxLength = 255
-            Me.columnMEMBID.AllowDBNull = false
-            Me.columnMEMBID.MaxLength = 10
+            Me.columnCARDNO.MaxLength = 50
             Me.columnMEMBERNM.MaxLength = 150
             Me.columnDIAGCODE.ReadOnly = true
             Me.columnDIAGCODE.MaxLength = 154
+            Me.columnSUBPRODID.ReadOnly = true
             Me.columnSUBPRODID.MaxLength = 50
+            Me.columnBILLEDAMT.ReadOnly = true
+            Me.columnACCEPTAMT.ReadOnly = true
+            Me.columnEXCESSAMT.ReadOnly = true
             Me.columnSTATUSNM.ReadOnly = true
             Me.columnSTATUSNM.MaxLength = 50
             Me.columnUSERNAME.MaxLength = 250
@@ -770,6 +788,21 @@ Partial Public Class PROAPPSDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property ADMISSIONDT() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableUSP_RPT_TRANSAKSI_CLAIM.ADMISSIONDTColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'ADMISSIONDT' in table 'USP_RPT_TRANSAKSI_CLAIM' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableUSP_RPT_TRANSAKSI_CLAIM.ADMISSIONDTColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Property POLICYNO() As String
             Get
                 Return CType(Me(Me.tableUSP_RPT_TRANSAKSI_CLAIM.POLICYNOColumn),String)
@@ -796,12 +829,16 @@ Partial Public Class PROAPPSDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property MEMBID() As String
+        Public Property CARDNO() As String
             Get
-                Return CType(Me(Me.tableUSP_RPT_TRANSAKSI_CLAIM.MEMBIDColumn),String)
+                Try 
+                    Return CType(Me(Me.tableUSP_RPT_TRANSAKSI_CLAIM.CARDNOColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'CARDNO' in table 'USP_RPT_TRANSAKSI_CLAIM' is DBNull.", e)
+                End Try
             End Get
             Set
-                Me(Me.tableUSP_RPT_TRANSAKSI_CLAIM.MEMBIDColumn) = value
+                Me(Me.tableUSP_RPT_TRANSAKSI_CLAIM.CARDNOColumn) = value
             End Set
         End Property
         
@@ -951,6 +988,18 @@ Partial Public Class PROAPPSDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsADMISSIONDTNull() As Boolean
+            Return Me.IsNull(Me.tableUSP_RPT_TRANSAKSI_CLAIM.ADMISSIONDTColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetADMISSIONDTNull()
+            Me(Me.tableUSP_RPT_TRANSAKSI_CLAIM.ADMISSIONDTColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function IsCLIENTNAMENull() As Boolean
             Return Me.IsNull(Me.tableUSP_RPT_TRANSAKSI_CLAIM.CLIENTNAMEColumn)
         End Function
@@ -959,6 +1008,18 @@ Partial Public Class PROAPPSDataSet
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub SetCLIENTNAMENull()
             Me(Me.tableUSP_RPT_TRANSAKSI_CLAIM.CLIENTNAMEColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsCARDNONull() As Boolean
+            Return Me.IsNull(Me.tableUSP_RPT_TRANSAKSI_CLAIM.CARDNOColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetCARDNONull()
+            Me(Me.tableUSP_RPT_TRANSAKSI_CLAIM.CARDNOColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -1227,9 +1288,10 @@ Namespace PROAPPSDataSetTableAdapters
             tableMapping.ColumnMappings.Add("PROVIDERID", "PROVIDERID")
             tableMapping.ColumnMappings.Add("PROVIDERNAME", "PROVIDERNAME")
             tableMapping.ColumnMappings.Add("TRANSACTIONID", "TRANSACTIONID")
+            tableMapping.ColumnMappings.Add("ADMISSIONDT", "ADMISSIONDT")
             tableMapping.ColumnMappings.Add("POLICYNO", "POLICYNO")
             tableMapping.ColumnMappings.Add("CLIENTNAME", "CLIENTNAME")
-            tableMapping.ColumnMappings.Add("MEMBID", "MEMBID")
+            tableMapping.ColumnMappings.Add("CARDNO", "CARDNO")
             tableMapping.ColumnMappings.Add("MEMBERNM", "MEMBERNM")
             tableMapping.ColumnMappings.Add("DIAGCODE", "DIAGCODE")
             tableMapping.ColumnMappings.Add("SUBPRODID", "SUBPRODID")
@@ -1259,13 +1321,16 @@ Namespace PROAPPSDataSetTableAdapters
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@RETURN_VALUE", Global.System.Data.SqlDbType.Int, 4, Global.System.Data.ParameterDirection.ReturnValue, 10, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@ADMISSIONDT_FROM", Global.System.Data.SqlDbType.[Date], 3, Global.System.Data.ParameterDirection.Input, 10, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
             Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@ADMISSIONDT_TO", Global.System.Data.SqlDbType.[Date], 3, Global.System.Data.ParameterDirection.Input, 10, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@PROVIDERID", Global.System.Data.SqlDbType.VarChar, 10, Global.System.Data.ParameterDirection.Input, 0, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@CLIENTCODE", Global.System.Data.SqlDbType.VarChar, 10, Global.System.Data.ParameterDirection.Input, 0, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
+            Me._commandCollection(0).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@STATUS", Global.System.Data.SqlDbType.VarChar, 5, Global.System.Data.ParameterDirection.Input, 0, 0, Nothing, Global.System.Data.DataRowVersion.Current, false, Nothing, "", "", ""))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
-        Public Overloads Overridable Function Fill(ByVal dataTable As PROAPPSDataSet.USP_RPT_TRANSAKSI_CLAIMDataTable, ByVal ADMISSIONDT_FROM As Global.System.Nullable(Of Date), ByVal ADMISSIONDT_TO As Global.System.Nullable(Of Date)) As Integer
+        Public Overloads Overridable Function Fill(ByVal dataTable As PROAPPSDataSet.USP_RPT_TRANSAKSI_CLAIMDataTable, ByVal ADMISSIONDT_FROM As Global.System.Nullable(Of Date), ByVal ADMISSIONDT_TO As Global.System.Nullable(Of Date), ByVal PROVIDERID As String, ByVal CLIENTCODE As String, ByVal STATUS As String) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
             If (ADMISSIONDT_FROM.HasValue = true) Then
                 Me.Adapter.SelectCommand.Parameters(1).Value = CType(ADMISSIONDT_FROM.Value,Date)
@@ -1276,6 +1341,21 @@ Namespace PROAPPSDataSetTableAdapters
                 Me.Adapter.SelectCommand.Parameters(2).Value = CType(ADMISSIONDT_TO.Value,Date)
             Else
                 Me.Adapter.SelectCommand.Parameters(2).Value = Global.System.DBNull.Value
+            End If
+            If (PROVIDERID Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(3).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(3).Value = CType(PROVIDERID,String)
+            End If
+            If (CLIENTCODE Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(4).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(4).Value = CType(CLIENTCODE,String)
+            End If
+            If (STATUS Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(5).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(5).Value = CType(STATUS,String)
             End If
             If (Me.ClearBeforeFill = true) Then
                 dataTable.Clear
@@ -1288,7 +1368,7 @@ Namespace PROAPPSDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
-        Public Overloads Overridable Function GetData(ByVal ADMISSIONDT_FROM As Global.System.Nullable(Of Date), ByVal ADMISSIONDT_TO As Global.System.Nullable(Of Date)) As PROAPPSDataSet.USP_RPT_TRANSAKSI_CLAIMDataTable
+        Public Overloads Overridable Function GetData(ByVal ADMISSIONDT_FROM As Global.System.Nullable(Of Date), ByVal ADMISSIONDT_TO As Global.System.Nullable(Of Date), ByVal PROVIDERID As String, ByVal CLIENTCODE As String, ByVal STATUS As String) As PROAPPSDataSet.USP_RPT_TRANSAKSI_CLAIMDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
             If (ADMISSIONDT_FROM.HasValue = true) Then
                 Me.Adapter.SelectCommand.Parameters(1).Value = CType(ADMISSIONDT_FROM.Value,Date)
@@ -1299,6 +1379,21 @@ Namespace PROAPPSDataSetTableAdapters
                 Me.Adapter.SelectCommand.Parameters(2).Value = CType(ADMISSIONDT_TO.Value,Date)
             Else
                 Me.Adapter.SelectCommand.Parameters(2).Value = Global.System.DBNull.Value
+            End If
+            If (PROVIDERID Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(3).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(3).Value = CType(PROVIDERID,String)
+            End If
+            If (CLIENTCODE Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(4).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(4).Value = CType(CLIENTCODE,String)
+            End If
+            If (STATUS Is Nothing) Then
+                Me.Adapter.SelectCommand.Parameters(5).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.SelectCommand.Parameters(5).Value = CType(STATUS,String)
             End If
             Dim dataTable As PROAPPSDataSet.USP_RPT_TRANSAKSI_CLAIMDataTable = New PROAPPSDataSet.USP_RPT_TRANSAKSI_CLAIMDataTable()
             Me.Adapter.Fill(dataTable)

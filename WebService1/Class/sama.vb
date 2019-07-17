@@ -113,6 +113,30 @@ Public Class sama
         End Using
     End Sub
 
+    Public Sub isiddlMSStatus2(ByVal Nameddl As DropDownList)
+
+        Using con As New SqlConnection(config.MSSQLConnection)
+            Dim cmd As New SqlCommand("select STATUS,STATUSNM from dbo.MSSTATUS with (nolock)where isactive='true' and type='TRX'", con)
+            Try
+                con.Open()
+                Dim dr As SqlDataReader = cmd.ExecuteReader()
+                Nameddl.Items.Clear()
+                Nameddl.Items.Insert(0, New ListItem("Pilih Status..", "99"))
+                Nameddl.Items.Insert(1, New ListItem("Semua", ""))
+                While dr.Read()
+                    Dim n As New ListItem
+                    n.Text = dr(1).ToString()
+                    n.Value = dr(0).ToString()
+                    Nameddl.Items.Add(n)
+                End While
+            Catch ex As Exception
+                Throw New Exception(ex.Message)
+            Finally
+                con.Close()
+            End Try
+        End Using
+    End Sub
+
     Public Sub isiddlMSSalutation(ByVal Nameddl As DropDownList)
         Using con As New SqlConnection(config.MSSQLConnection)
             Dim cmd As New SqlCommand("select * from dbo.MSSALUTATION()", con)

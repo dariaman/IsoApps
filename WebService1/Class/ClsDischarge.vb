@@ -104,6 +104,39 @@ Public Class ClsDischarge
         End Try
     End Function
 
+    Public Function bindDischarge2(TransactionId As String, status As String, ProviderID As String) As DataTable
+        If ProviderID = "" Then
+            ProviderID = "%"
+        End If
+        Try
+            Using con As New SqlConnection(config.MSSQLConnection)
+                Dim cmd As New SqlCommand
+                cmd.CommandType = CommandType.StoredProcedure
+                cmd.CommandTimeout = config.SQLtimeout
+                cmd.Connection = con
+                Try
+                    cmd.CommandText = "SP_MSTRANSACTIONHDR_SELECT2"
+                    cmd.Parameters.Clear()
+                    cmd.Parameters.Add("@TRANSACTIONID", SqlDbType.VarChar).Value = TransactionId
+                    cmd.Parameters.Add("@STATUS", SqlDbType.VarChar).Value = status
+                    cmd.Parameters.Add("@PROVIDERID", SqlDbType.VarChar).Value = ProviderID
+
+                    Dim da As New SqlDataAdapter(cmd)
+                    Dim dt As New DataTable
+                    da.Fill(dt)
+                    Return dt
+
+                Catch ex As Exception
+                    Return Nothing
+                Finally
+                    con.Close()
+                End Try
+
+            End Using
+        Catch ex As Exception
+            Throw New Exception(ex.Message)
+        End Try
+    End Function
 
     Public Function getTransaction(trxid As String, opt As String, providerId As String) As DataTable
         Try

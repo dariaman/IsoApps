@@ -27,10 +27,10 @@
               <Width>8.63833cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.54517cm</Width>
+              <Width>3.84163cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>5.06646cm</Width>
+              <Width>9.59083cm</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>2.5cm</Width>
@@ -312,7 +312,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>MEMBER ID</Value>
+                              <Value>CARD NO</Value>
                               <Style>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
@@ -837,21 +837,21 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="MEMBID">
+                    <Textbox Name="CARDNO">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!MEMBID.Value</Value>
+                              <Value>=Fields!CARDNO.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>MEMBID</rd:DefaultName>
+                      <rd:DefaultName>CARDNO</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -1151,7 +1151,7 @@
         <Top>2.37808cm</Top>
         <Left>0.49953cm</Left>
         <Height>1.2cm</Height>
-        <Width>67.53331cm</Width>
+        <Width>73.35414cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -1326,7 +1326,7 @@
     <Height>2.91667in</Height>
     <Style />
   </Body>
-  <Width>26.78458in</Width>
+  <Width>29.07625in</Width>
   <Page>
     <PageHeight>29.7cm</PageHeight>
     <PageWidth>21cm</PageWidth>
@@ -1344,7 +1344,7 @@
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>4621fc85-85a7-4a63-b63a-cfe25bb94535</rd:DataSourceID>
+      <rd:DataSourceID>3f415fb0-1f73-44cb-b75c-940c4d9fc789</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
@@ -1378,8 +1378,8 @@
           <DataField>CLIENTNAME</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="MEMBID">
-          <DataField>MEMBID</DataField>
+        <Field Name="CARDNO">
+          <DataField>CARDNO</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="MEMBERNM">
@@ -1416,8 +1416,8 @@
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>DS_TRANSAKSI_CLAIM</rd:DataSetName>
-        <rd:SchemaPath>D:\Proj\WebApplication2 - Isomedik\WebApplication2\Report\DS_TRANSAKSI_CLAIM.xsd</rd:SchemaPath>
+        <rd:DataSetName>PROAPPSDataSet</rd:DataSetName>
+        <rd:SchemaPath>D:\Proj\WebApplication2 - Isomedik\WebApplication2\PROAPPSDataSet.xsd</rd:SchemaPath>
         <rd:TableName>USP_RPT_TRANSAKSI_CLAIM</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>

@@ -106,6 +106,12 @@
         End Get
     End Property
 
+    Public Shared ReadOnly Property RELIsomedikConnection() As String
+        Get
+            Return System.Configuration.ConfigurationManager.ConnectionStrings("RELIsomedik").ConnectionString
+        End Get
+    End Property
+
     Public Shared ReadOnly Property AcaBlankoDB() As String
         Get
             Return System.Configuration.ConfigurationManager.AppSettings("AcaBlankoDB")

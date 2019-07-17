@@ -121,9 +121,9 @@ Public Class clsReport
                     p.DSstr1 = dr("DSstr1")
                     p.Param1 = param1
                     p.Param2 = param2
-                    p.Param3 = dr("Param3")
-                    p.Param4 = dr("Param4")
-                    p.Param5 = dr("Param5")
+                    p.Param3 = dr("Param3").ToString
+                    p.Param4 = dr("Param4").ToString
+                    p.Param5 = dr("Param5").ToString
                 End While
             Catch ex As Exception
                 Throw New Exception(ex.Message)
@@ -317,13 +317,13 @@ Public Class clsReport
 
         Public Sub viewrpt(RV As ReportViewer, ReportPath As String, RptSql As String, DsName As String, prm1 As String, prm2 As String, prm3 As String, prm4 As String, prm5 As String)
             Dim DSUtama As DataSet
+            RV.ShowExportControls = True
+            RV.ProcessingMode = ProcessingMode.Local
             With RV.LocalReport
                 .ReportPath = ReportPath
                 DSUtama = RptQuery(RptSql)
                 Dim reportDS As ReportDataSource = New ReportDataSource(DsName, DSUtama.Tables(0))
                 .ReportEmbeddedResource = ReportPath
-                RV.ProcessingMode = ProcessingMode.Local
-                RV.ShowExportControls = True
                 .DataSources.Clear()
                 .DataSources.Add(reportDS)
                 .DisplayName = "Report : " & DsName

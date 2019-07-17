@@ -35,7 +35,7 @@ Public Class TransactionList
                             If _sama.MenuAccess(filename, UserLogin.UserId) = False Then
                                 Response.Redirect("Home.aspx", False)
                             End If
-                            _sama.isiddlMSStatus(ddlSearch)
+                            _sama.isiddlMSStatus2(ddlSearch)
                             If UserLogin.providerid <> "" Then
 
                                 If ((Request.QueryString("act").ToString() = "process")) Then
@@ -176,7 +176,7 @@ Public Class TransactionList
                             End If
                         Catch ex As Exception
                             _mv1.ActiveViewIndex = 0
-                            bindData("1", _tb_search.Text.Trim(), ddlSearch.SelectedValue)
+                            bindData(_tb_search.Text.Trim(), ddlSearch.SelectedValue, UserLogin.providerid)
                         End Try
                     Catch ex As Exception
                         ClientScript.RegisterStartupScript(Me.GetType, "confirm", "<script language=javascript>jqxAlert.Alert('Error!, " & ex.Message.ToString & vbCrLf & Environment.NewLine & "');</script>")
@@ -192,9 +192,9 @@ Public Class TransactionList
         End If
     End Sub
 
-    Protected Sub bindData(status As String, searchtxt As String, statushdr As String)
+    Protected Sub bindData(status As String, transaksiID As String, ProviderID As String)
         Try
-            _gv_discharge.DataSource = _ClsDischarge.bindDischarge(status, searchtxt, UserLogin.providerid, statushdr)
+            _gv_discharge.DataSource = _ClsDischarge.bindDischarge2(status, transaksiID, ProviderID)
             _gv_discharge.DataBind()
         Catch ex As Exception
             Throw New Exception(ex.Message)
@@ -263,7 +263,7 @@ Public Class TransactionList
         Try
             System.Threading.Thread.Sleep(500)
             _gv_discharge.PageIndex = e.NewPageIndex
-            bindData("1", _tb_search.Text.Trim(), ddlSearch.SelectedValue)
+            bindData(_tb_search.Text.Trim(), ddlSearch.SelectedValue, UserLogin.providerid)
         Catch ex As Exception
             ClientScript.RegisterStartupScript(Me.GetType, "confirm", "<script language=javascript>jqxAlert.Alert('Error!, " & ex.Message.ToString & vbCrLf & Environment.NewLine & "');</script>")
             Dim msg As String = String.Format("{0} - TransactionList - " & UserLogin.UserId & " - {1} - {2}{3}", Now.ToString("dd/MM/yyyy HH:mm:ss"), UserLogin.UserId, ex, Environment.NewLine)
@@ -346,7 +346,7 @@ Public Class TransactionList
     Protected Sub btnSearch1_Click(sender As Object, e As EventArgs) Handles btnSearch1.Click
         Try
             System.Threading.Thread.Sleep(500)
-            bindData("1", _tb_search.Text.Trim(), ddlSearch.SelectedValue)
+            bindData(_tb_search.Text.Trim(), ddlSearch.SelectedValue, UserLogin.providerid)
         Catch ex As Exception
             ClientScript.RegisterStartupScript(Me.GetType, "confirm", "<script language=javascript>jqxAlert.Alert('Error!, " & ex.Message.ToString & vbCrLf & Environment.NewLine & "');</script>")
             Dim msg As String = String.Format("{0} - TransactionList - " & UserLogin.UserId & " - {1} - {2}{3}", Now.ToString("dd/MM/yyyy HH:mm:ss"), UserLogin.UserId, ex, Environment.NewLine)

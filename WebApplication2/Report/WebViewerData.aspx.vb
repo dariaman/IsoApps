@@ -10,7 +10,7 @@ Imports System.Drawing
 Imports System.Drawing.Imaging
 Imports System.Drawing.Printing
 Imports System.Collections.Generic
-Public Class WebViewer
+Public Class WebViewerData
     Inherits System.Web.UI.Page
 
     Public Property UserLogin() As WebService.ClsUser
